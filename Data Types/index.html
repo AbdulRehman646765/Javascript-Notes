@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Types</title>
+    <link rel="stylesheet" href="style.css  " />
+  </head>
+
+  <body>
+    <h1 class="main-title">Data Types in JavaScript</h1>
+
+    <h1>Data Types in JavaScript</h1>
+    <h2>There are two types of data types in JavaScript.</h2>
+    <ol>
+      <li>
+        <p>Primitive ( Value Types )</p>
+      </li>
+      <li>
+        <p>Non Primitive ( Reference Types )</p>
+      </li>
+    </ol>
+    <h2>Primitive Data Types in 7 Categories.</h2>
+    <pre>
+      <b>NN</b> : Number & Null 
+      <b>SS</b> : String & Symbol
+      <b>BB</b> : Boolean & BigInt  
+      <b>U</b>  : Undefined
+    </pre>
+    <ol>
+      <!-- Number Define............................................. -->
+      <li><code>Number</code></li>
+      <h3>
+        Number data type in javascript can be used to hold decimal values as
+        well as values without decimals.
+      </h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const x = 786;
+      const y = 25.26;
+      console.log("Value of x = " + x); <b>// The Result is "Value of x = 786"</b>
+      console.log("Value of y = " + y); <b>// The Result is "Value of y = 25.26"</b>
+      </pre>
+      <hr />
+      <!-- Null Define............................................. -->
+      <li><code>Null</code></li>
+      <h3>This data type can hold only one possible value that is null.</h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const x = null;
+      console.log("Value of x = " + x); <b>// The Result is "Value of x = null"</b>
+
+      </pre>
+      <hr />
+      <!-- String Define.............................................    -->
+      <li><code>String</code></li>
+      <h3>
+        The string data type in JavaScript represents a sequence of characters
+        that are surrounded by single or double quotes.
+      </h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const string1 = 'Hello Friends';
+      const string2 = "Welcome to My New House";
+      console.log("Value of string1 = " + string1); <b>// The Result is "Value of string1 = Hello Friends"</b>
+      console.log("Value of string2 = " + string2); <b>// The Result is "Value of string2 = Welcome to My New House"</b>
+      </pre>
+      <hr />
+      <!-- Symbol Define.............................................       -->
+      <li><code>Symbol</code></li>
+      <h3>
+        This data type is used to create objects which will always be unique.
+        these objects can be created using Symbol constructor.
+      </h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const sym = Symbol("Hello") // Symbol Define karny ky lye "S" ko Capital rakhna ho ga.
+      console.log(typeof (sym)); <b>// The Result is "symbol"</b>
+      console.log(sym); <b>// The Result is "Symbol(Hello)"</b>
+      </pre>
+      <hr />
+      <!-- Boolean Define.............................................       -->
+      <li><code>Boolean</code></li>
+      <h3>
+        The boolean data type can accept only two values i.e. true and false.
+      </h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const username = "Abdul Rehman";
+      const userAge = 23;
+      const isGraduate = true;
+      console.log(isGraduate); <b>// The Result is "true"</b>
+      console.log(typeof isGraduate); <b>// The Result is "boolean"</b>
+      </pre>
+      <hr />
+      <!-- BigInt Define.............................................       -->
+      <li><code>BigInt</code></li>
+      <h3 class="line_height">
+        This data type can represent numbers greater than 2<sup>53</sup>-1 which
+        helps to perform operations on large numbers. <br />
+        The number is specified by writing ‘n’ at the end of the value.
+      </h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      Without BigInt
+
+      const x = 100000000000
+      const y = 100000000000
+      console.log(x*y); <b>// The Result is "1e+22"</b>
+      
+      With BigInt
+      
+      const x = 100000000000n
+      const y = 100000000000n
+      console.log(x*y); <b>// The Result is "10000000000000000000000n"</b>
+
+      <strong>Note!</strong> BigInt ki help sy hum bari sy bari value ko b calculate kar sakty hain.
+      <strong>Note!</strong> But BigInt ki help sy calculate usi zoorat main ho ga ja hum value ky end main "n" lagayn gy.
+      </pre>
+      <hr />
+      <!-- Undefined Define.............................................       -->
+      <li><code>Undefined</code></li>
+      <h3>The meaning of undefined is ‘value is not assigned’.</h3>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+
+      let x  // value is not assigned 
+      console.log("Value of x = " + x); <b>// The Result is "Value of x = undefined"</b>
+      </pre>
+      <hr />
+    </ol>
+
+      
+    <script src="script.js"></script>
+  </body>
+</html>

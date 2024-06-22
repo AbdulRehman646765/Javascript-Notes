@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions in JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="main-title">Functions in JavaScript</h1>
+
+    <!-- Functions Define......................................................................        -->
+    <h1>Functions in JavaScript</h1>
+    <li><code>Functions</code></li>
+    <h3>
+      JavaScript function is a set of statements that take inputs, do some
+      specific computation, and produce output.
+    </h3>
+
+    <h2>Syntax Of Function</h2>
+    <pre> 
+      <b>// Function Definition................</b>
+        function functionName (Parameter1, Parameter2, ...) 
+        {
+          // Function body
+        }
+
+      <b>// Function Call................</b>
+        functionName(Argument1, Argument2, ...)
+    </pre>
+
+    <h2>Function's Example</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      function UserIntro() {
+        console.log("Hi!");
+        console.log("My Name is Abdul Rehman.");
+        console.log("I'm a Web Designer.");  
+      }
+      UserIntro()
+    </pre>
+
+    <h2>Function Example with Default Parameters</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      function introduceMe(<b><mark>username = "Procoder", skill = "Professional"</mark></b>) {
+        console.log<b>(`My Name is ${username}`)</b>;
+        console.log<b>(`I'm a ${skill}`)</b>;  
+      }
+      
+      introduceMe(<mark>"Abdul Rehman", "Web Developer"</mark>)
+      // The Result is "<b>My Name is Abdul Rehman.
+                        I'm a Web Developer.</b>"
+                        
+      introduceMe(<mark>"Bilal Hassan", "Software Engineer"</mark>)
+      // The Result is "<b>My Name is Bilal Hassan.
+                        I'm a Software Engineer.</b>"
+
+      introduceMe() <b><mark>// Default Parameters Example</mark></b>
+      // The Result is "<b>My Name is Procoder.
+                        I'm a Professional.</b>"
+    </pre> -
+
+    <!-- Return Value in JavaScript.......................................................... -->
+    <h1>Return Value in JavaScript</h1>
+    <p><b>Jo b <mark>Value Return</mark> Karyn gy Wo Function Name main Chali Jye gi.</b></p>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      function subjects<b>(urdu,english,math,physics,chemistry)</b> {
+        const margeSubjects = urdu+english+math+physics+chemistry;
+        return margeSubjects;
+      };
+      const sumMarks = subjects<b>(100,90,80,80,90)</b>;
+      console.log("Marks Obtain - " + sumMarks); <b>// The Result is "Marks Obtain - 440"</b>
+
+      <strong>Marks Percentage:</strong>
+      
+      function percentage(totalMarks){
+        const marksResult = totalMarks/500*100;
+        return marksResult;
+      }
+      const finalResult = percentage(sumMarks);
+      console.log("Your Marks is " + finalResult + "%"); <b>// The Result is "Your Marks is 88%"</b>
+    </pre>
+
+    <!-- What is Hoisting in JS............................................................... -->
+    <h1>What is Hoisting in JS</h1>
+    <h2>These Both Examples are <mark>Function Definitions.</mark></h2>
+    <h3>Function Declaration:</h3>
+    <pre>
+      function books(){
+        console.log("Urdu", "English", "Math", "Physics", "Chemistry");
+      }
+      books()
+    </pre>
+
+    <h3>Function Expression:</h3>
+    <pre>
+      <b>var</b> codingLang = function(){
+        console.log("Html", "Css", "JavaScript", "Python");
+      }
+      <b>codingLang()</b>
+
+      <strong>Note!</strong> jab hum <b><mark>Variable</mark></b> main <b><mark>Function Define</mark></b> Karyn gy tu Variable ka Name hi Function ka Name ho ga.
+      Function ka Name b dy Sakty hain. <b><mark>Function ka Name Optional hai.</mark></b> But Function ko <b><mark>Call</mark></b> Variable ky Name sy hi Karyn gy. 
+    </pre>
+    <!-- Anonymous Function.................................................................... -->
+    <h1>Anonymous Function</h1>
+    <code><strong>Note!</strong> jis Function ko koi Naam na dia ho usy "(Anonymous Function)" kehty hain. jesy ky yeh below example main clear ho jye ga.</code>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      var codingLang = <b><mark>function()</mark></b>{
+        console.log("Html", "Css", "JavaScript", "Python");
+      }
+      codingLang()
+    </pre>
+    <hr>
+    
+    <!-- Higher Order Functions and Callbacks Functions............................................ -->
+    <h1>Higher Order Functions and Callback Functions</h1>
+  <code><strong>Note!</strong> Jab kisi Function ko <b><mark>Call</mark></b> karty time us main koi or Function <b><mark>Pass</mark></b> Karyn. Tu jo Function <b><mark>Pass</mark></b> kia ho wo <b><mark>Callback Function</mark></b> hota hai.</code> <br> 
+
+  <code><strong>Note!</strong> Or jis ky ander Function <b><mark>Pass</mark></b> kia ja raha hai wo <b><mark>Higher Order Function</mark></b> hota hai.</code>
+
+  <h2>Some Examples:</h2>
+  <pre>
+    <strong>Example:</strong> Below is an example.
+
+   <h3> Higher Order Function</h3>
+    function <b>sample</b>(b){
+      console.dir(b);
+      b()  
+    }
+    <h3>Callback Function</h3>
+    function sayHi(){
+      console.log("Salam");
+    }
+    <b>sample</b>(sayHi) 
+
+    <h3>Callback Function
+Anonymous Function</h3>
+<b>sample(</b>function (){
+      console.log("Hello");
+    }<b>)</b>
+    </pre>
+  <hr>
+
+  <!-- Difference between Methods and Function........................................................... -->
+  <h1>Difference between Methods and Function</h1>
+  <code><strong>Note!</strong> Har aik Function Method nai hota lekin har aik Method function hota hai.</code> <br>
+  <br>
+
+  <code><strong>Note!</strong> Esa koi b Function jis ko <b><mark>(.)</mark></b> sy access karyn wo <b><mark>Method</mark></b> kehlata hai.</code> <br>
+  <br>
+
+  <code><strong>Note!</strong> Function ko object ky ander rakhny ky lye humy Function ko key deni ho gi. for example <b><mark>abc:</mark></b>. Key ka name hi Function ka name ho ga. isi name sy hi Function ko <b><mark>access</mark></b> karyn gy.</code> <br>
+  <pre>
+    <strong>Example:</strong> Below is an example.
+
+    const sample = {
+      <b>add:</b> function (a, b) {
+        return a + b;
+      },
+    };    
+  </pre>
+
+  <h2>We are more explain Methods and functions in Chart table</h2>
+  <div class="chart-pic">
+    <img src="chart pic.jpg" alt="Chart Pic">
+  </div> <br> <hr>
+
+  <!-- Arrow Functions...................................................................................... -->
+  <h1>Arrow Functions</h1>
+  <h2>Before Arrow:</h2>
+  <pre>
+    <strong>Example: </strong> Below is an example.
+
+    hello = function() {
+      return "Hello World!";
+    }
+  </pre>
+
+  <h2>After Arrow Function:</h2>
+  <pre>
+    <strong>Example: </strong> Below is an example.
+
+    hello = () <b><mark>=></mark></b> {
+      return "Hello World!";
+    }
+  </pre>
+
+  <h2>Implicit Return:</h2>
+  <pre>
+    <strong>Example: </strong> Below is an example.
+
+    add = (a,b) => <b><mark>a + b</mark></b>;
+  </pre>
+
+  <h2>Explicit Return:</h2>
+  <pre>
+    <strong>Example: </strong> Below is an example.
+
+    add = (a,b) => {
+      <b><mark>return a + b</mark></b>;
+    }
+  </pre>
+
+  
+    <script src="script.js"></script>
+  </body>
+</html>

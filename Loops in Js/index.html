@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops In JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Loops in JavaScript</h1>
+
+    <h1>Loops in JavaScript</h1>
+    <h2>Five Types Loops in JS</h2>
+    <ol>
+      <li>While Loop</li>
+      <li>For Loop</li>
+      <li>Do While Loop</li>
+      <li>For Of Loop</li>
+      <li>For In Loop</li>
+    </ol>
+    <hr />
+
+    <!-- While loop.................................................................................. -->
+    <h1>While Loop</h1>
+    <h2>While Loop Syntax:</h2>
+    <pre>
+        while (<b>condition</b>) {
+            Code block to be executed 
+        }
+    </pre>
+
+    <h2>Some Examples of While Loop</h2>
+    <h3>Counting Digits (1 to 5) Example</h3>
+    <pre>
+        <strong>Example:</strong> Below is an example
+
+        let i = 1
+        while(i <= 5){
+            console.log(i);
+            i++
+        }
+
+        Output in Console:
+        1
+        2
+        3
+        4
+        5
+    </pre>
+
+    <h3>Friends List Example</h3>
+    <pre>
+        <strong>Example:</strong> Below is an example
+
+        const friendsName = ["Ali Hassan", "Bilal Hassan", "Qasim Hussain", "Usman Ali", "Saad Shabeer"]
+
+        let i = 0;
+        while (i < friendsName.length) {
+            console.log(`${i + 1}. ${friendsName[i]}`);
+            i++
+        }
+
+        Output in Console:
+        1. Ali Hassan
+        2. Bilal Hassan
+        3. Qasim Hussain
+        4. Usman Ali
+        5. Saad Shabeer
+    </pre>
+    <hr />
+
+    <!-- For loop..................................................................................... -->
+
+    <h1>For Loop</h1>
+    <h2>
+      A for loop is used when you know how many times you need to repeat a
+      certain block of code. It takes three statements.
+    </h2>
+    <p class="main-p">
+      <b>For loop</b> us time use hota hai jab ap janty hoon ky ap ko code ky ik
+      makhsoos Block ko kitni bar run karna hai.
+    </p>
+
+    <ol>
+      <li>Initialization statement</li>
+      <p>
+        It is the initialization of the counter. It is executed once before the
+        execution of the code block.
+      </p>
+      <li>Condition Statement</li>
+      <p>It defines the testing condition for executing the code block</p>
+      <li>Increment or Decrement statement</li>
+      <p>
+        It is the increment or decrement of the counter & executed (every time)
+        after the code block has been executed.
+      </p>
+    </ol>
+
+    <h2>For Loop Syntax:</h2>
+    <pre>
+        for (statement 1 ; statement 2 ; statement 3){
+            code here...
+        }   
+    </pre>
+
+    <h3>Number Print (1 to 10) Example</h3>
+    <pre>
+        for(let i = 1; i <= 10; i++){
+            console.log(i);
+        }
+    </pre>
+
+    <h3>Even Number (0 to 100) Example</h3>
+    <pre>
+        for(let i = 1; i <= 50; i++){
+            console.log(`${i * 2}`) <b>// The Result is "2,4,6,8,10,12,14,16,..........100"</b>
+        }
+    </pre>
+
+    <h3>Counting Digits (1 to 10) Example</h3>
+    <pre>
+        for(let i = 1; i <= 10; i++){
+            console.log(i);
+        }Kk
+    </pre>
+
+    <h3>Math Table Prints Example</h3>
+    <pre>
+        for (let i = 1; i <= 20; i++) {
+            console.log('');
+            console.log(`Table Number ${i}`);
+            for (let j = 1; j <= 10; j++) {
+                console.log(`${i} * ${j} = ${i*j}`);        
+            }
+        }
+    </pre>
+    <hr />
+
+    <!-- Do While loop............................................................................. -->
+    <h1>Do While Loop</h1>
+    <h2>Do While Loop Syntax:</h2>
+    <pre>
+        do {
+            // Statements
+        }
+        while(conditions)   
+    </pre>
+
+    <h3>Counting Digits (1 to 10) Example</h3>
+    <pre>
+        let i = 1
+        do {
+            console.log(i);
+            i++
+        } while (i <= 5);
+    </pre>
+    <hr />
+
+    <!-- For of loop............................................................................. -->
+    <h1>For of Loop</h1>
+    <p>
+      The for...of statement executes a loop that operates on a sequence of
+      values sourced from an iterable object.
+    </p>
+    <code
+      ><strong>Note!</strong> For... of loop ka use hum
+      <b><mark>Objects</mark></b> par nai kar sakty.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Objects par loop karny kay lye hum
+      <b><mark>For...in</mark></b></code
+    >
+    loop ka use karyn gy.
+    <h2>For...of loop Syntax:</h2>
+    <pre>
+        for (variable <b><mark>of</mark></b> iterable) {
+            // code block to be executed
+        }
+
+        <b>variable</b> - For every iteration the value of the next property is assigned to the variable.
+                    Variable can be declared with <b>const, let, or var</b>.
+
+        <b>iterable</b> - An object that has <b>iterable properties</b>.
+    </pre>
+
+    <h2>Looping over an Array</h2>
+    <pre>
+    	<strong>Example:</strong> Below is an example.
+
+	const fruits = ["Apple", "Banana", "Peach", "Mango", "Water Melon"];
+        for(const fruit <b><mark>of</mark></b> fruits){
+        console.log(fruit)
+        }
+        
+        <strong>Output:</strong>
+        
+        <b><mark>Apple</mark></b>
+        <b><mark>Banana</mark></b>
+        <b><mark>Peach</mark></b>
+        <b><mark>Mango</mark></b>
+        <b><mark>Water Melon</mark></b>
+		</pre>
+    <h2>Looping over a String</h2>
+    <pre>
+    	<strong>Example:</strong> Below is an example.
+
+	const sayHi = "Hello";
+        for(const letter of sayHi){
+        console.log(letter)
+        }
+        
+        <strong>Output:</strong>
+        
+        <b><mark> H </mark></b>
+        <b><mark> e </mark></b>
+        <b><mark> l </mark></b>
+        <b><mark> l </mark></b>
+        <b><mark> o </mark></b>
+		</pre>
+    <hr />
+
+    <!-- For in loop................................................................................ -->
+    <h1>For in Loop</h1>
+    <h2>For...in loop Syntax:</h2>
+    <pre>
+        for (key <b><mark>in</mark></b> object) {
+            // code block to be executed
+          }
+    </pre>
+    <h2>UserIntro Example</h2>
+    <pre>
+        const userIntro = {
+            firstName: "Abdul",
+            lastName: "Rehman",
+            age: 24,
+            city: "Gujrat",
+            skill: "Web Developer",
+        }
+        for(const key <b><mark>in</mark></b> userIntro){
+            console.log(key)
+        }
+    </pre>
+
+    <h2>If only the keys of the object is to be accessed.</h2>
+    <p>
+      ager object ki sirf <b><mark>keys</mark></b> access karni hoon.
+    </p>
+    <pre>
+    	<strong>Example:</strong> Below is an example.
+
+        const userIntroKeys = <b><mark>Object.keys</mark></b>(userIntro)
+        console.log(userIntroKeys)
+
+        <strong>Output:</strong>
+
+        <b>(5) ['firstName', 'lastName', 'age', 'city', 'skill']</b>
+    </pre>
+
+    <h2>If only the values of the object is to be accessed.</h2>
+    <p>
+      ager object ki sirf <b><mark>values</mark></b> access karni hoon.
+    </p>
+    <pre>
+    	<strong>Example:</strong> Below is an example.
+
+        const userIntroValues = <b><mark>Object.values</mark></b>(userIntro)
+        console.log(userIntroValues)
+
+        <strong>Output:</strong>
+
+        <b>(5) ['Abdul', 'Rehman', 24, 'Gujrat', 'Web Developer']</b>
+    </pre>
+
+    <h2>If both the keys and values ​​of the object are to be accessed.</h2>
+    <p>
+      ager object ki <b><mark>keys aur values</mark></b> dono access karni hoon.
+    </p>
+    <pre>
+    	<strong>Example:</strong> Below is an example.
+
+        const userIntroEntires = <b><mark>Object.entires</mark></b>(userIntro)
+        console.log(userIntroEntires)
+
+        <strong>Output:</strong>
+
+        <b><i class="fa-solid fa-caret-down"></i> (5) [Array(2), Array(2), Array(2), Array(2), Array(2)]
+          <i class="fa-solid fa-caret-right"></i> (2) ['firstName', 'Abdul']
+          <i class="fa-solid fa-caret-right"></i> (2) ['lastName', 'Rehman']
+          <i class="fa-solid fa-caret-right"></i> (2) ['age', 24]
+          <i class="fa-solid fa-caret-right"></i> (2) ['city', 'Gujrat']
+          <i class="fa-solid fa-caret-right"></i> (2) ['skill', 'Web Developer']</b>
+    </pre>
+    <hr />
+
+      <h1>ForEach() Array Method</h1>
+      <h2>ForEach() loop Syntax:</h2>
+      <pre>
+        array.forEach(function(currentValue, index, arr), thisValue)
+        <h2>Parameters:</h2>
+        <b>function()</b>
+                  <b>Required.</b>
+                  A function to run for each array element.
+        <b>currentValue</b>
+                  <b>Required.</b>
+                  The value of the current element.
+        <b>index</b>
+                  <b>Optional.</b>
+                  The index of the current element.
+        <b>arr</b>
+                  <b>Optional.</b>
+                  The array of the current element.
+        <b>thisValue</b>
+                  <b>Optional. Default undefined.</b>
+                  A value passed to the function as its this value.
+      </pre>
+
+      <h2>Books Example <span class="head-span">with anonymous function and arrow function</span></h2>
+      <pre>
+        <strong>Example:</strong> Below is an example.
+
+        const books = ["Urdu", "English", "Islamic Studies", "Physics", "Chemistry"];
+
+        books.forEach((book) => {
+          console.log(book);
+        })
+      </pre>
+
+      <h2>Animals Example <span class="head-span">with named function</span></h2>
+      <pre>
+        <strong>Example:</strong> Below is an example.
+
+        const animals = ["Horse", "Cat", "Dog", "Tiger", "Lion"];
+
+        function <b><mark>abc</mark></b>(el){
+          console.log(el)
+        }
+        animals.<b>forEach(abc) </b>
+
+        <strong>Note!</strong> Named function itna common nai hai jitna anonymous function common hai. 
+      </pre>
+
+      <h2>Another ForEach Example <span class="head-span">with return value</span></h2>
+      <pre>
+        <strong>Example:</strong> Below is an example.
+
+        const vegetables = ["Potato", "Cucumber", "Beetroot", "Garlic", "Ginger"];
+        const sample = vegetables.forEach((vegetable) => {
+          console.log(vegetable);
+          <b><mark>return</mark></b> vegetable;
+        });
+
+        console.log(sample)
+
+        <strong>Output:</strong>
+
+        <b><mark>Potato</mark></b>
+        <b><mark>Cucumber</mark></b>
+        <b><mark>Beetroot</mark></b>
+        <b><mark>Garlic</mark></b>
+        <b><mark>Ginger</mark></b>
+        <b><mark>undefined</mark></b> // This is Return value output
+
+      </pre>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

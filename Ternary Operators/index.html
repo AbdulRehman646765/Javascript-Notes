@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary Operators</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Ternary Operators in javaScript</h1>
+
+    <h1>Conditional (Ternary) Operators</h1>
+    <h2>Syntax Of Ternary Operators</h2>
+
+    <pre>
+        const variableName = condition ? exprIfTrue : exprIfFalse;
+    </pre>
+
+    <h3>Some Examples</h3>
+    <pre>
+        const username = 5 > 4 ? "Abdul Rehman" : "Bilal Hassan";
+        console.log(username);
+        <hr>
+    <h2>True Condition</h2>
+        const gender = "M"
+        const userMessage = `${gender.toLocaleLowerCase() === "m" ? "He" : "She"} Study in a College.`
+        console.log(userMessage); <b>// The Result is "He Study in a College." This True Condition</b>
+
+        <strong>Note!</strong> is main yeh hota hai ky jo b variable main save karyn gay. ager usy type karyn gy tu result <b>"True"</b> aye ga or 
+           is ky ilawa kuch b type karyn gy tu result <b>"False"</b> aye ga.
+        <strong>Note!</strong> jesa ky is example main hum ny <b>"M"</b> save kia hai or hum ny <b>"M"</b> type kia isi lye is ka result <b>"True"</b> mean <b>"He"</b> aya.
+           or ager is ky ilawa kuch b type karty tu result <b>"False"</b> mean <b>"She"</b> ata.
+            
+<hr>
+<h2>False Condition</h2>
+        const gender = "M"
+        const userMessage = `${gender === "a" ? "He" : "She"} Study in a College.`
+        console.log(userMessage); <b>// The Result is "She Study in a College." This False Condition</b>  
+
+        <strong>Note!</strong> jesa ky is example main hum ny <b>"M"</b> save kia hai or hum ny <b>"M"</b> ky ilawa koi or type kia mean <b>"a"</b> isi lye is ka
+           result <b>"False"</b> mean <b>"She"</b> aya. or ager hum <b>"M"</b> type karty tu result <b>"True"</b> mean <b>"He"</b> ata.
+    </pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>

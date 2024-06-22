@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeout and SetInterval</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">SetTimeout and SetInterval in JavaScript</h1>
+
+    <!-- setTimeout and setInterval in JavaScript------------------------------------------------ -->
+    <h1>SetTimeout and SetInterval in JavaScript</h1>
+    <p>
+      <b
+        >SetTimeout schedules a single execution after a specified delay, while
+        SetInterval repeatedly executes a function with a fixed interval.</b
+      >
+      SetTimeout is used for one-time delays or scheduling a task in the future,
+      while SetInterval is suitable for recurring tasks.
+    </p>
+    <p><mark>SetTimeout or SetInterval dono same hain but in main yeh difference hai ky SetTimeout sirf <b>aik dafa run</b> hota hai. Or SetInterval <b>bar bar run</b> hota rehta hai.</mark></p>
+    <h1>SetTimeout</h1>
+    <h2>Definition:</h2>
+    <p>
+      SetTimeout schedules a <b>single execution</b> after a
+      <b>specified delay</b>. SetTimeout is used for one-time delays or
+      scheduling a task in the future
+    </p>
+    <code
+      ><strong>Note!</strong>
+      <b
+        ><mark>SetTimeout</mark> ik esa Function hai jis ky ander koi
+        <mark>String</mark> Pass karyn tu <mark>JavaScript</mark> usy
+        <mark>Code</mark> main <mark>Change</mark> kar deta hai.</b
+      >
+      Or Behind the Scene ik <b><mark>file Create</mark></b> karta hai. Or is ky
+      ander pura Code jo hum ny String ky ander likha hai tu wo String ko
+      <b><mark>Remove</mark></b> kar ky <b><mark>Normal Code</mark></b> kar deta
+      hai.</code
+    >
+    <br />
+    <br />
+    <h2>Syntax: setTimeout(function, milliseconds)</h2>
+    <h2>Parameter:</h2>
+    <ul class="setTimeout">
+      <li><b>function:</b> the first parameter is a function to be executed</li>
+      <li>
+        <b>milliseconds:</b> which indicates the number of milliseconds before
+        the execution takes place.
+      </li>
+    </ul>
+    <br />
+
+    <h2>Notes:</h2>
+    <code
+      ><strong>Note!</strong> SetTimeout main jab hum
+      <b><mark>console.log</mark></b> main code likhyn gy tu
+      <b><mark>console.log</mark></b> or jo is main
+      <b><mark>code</mark></b> likhna hai is main yeh
+      <b><mark>faraq</mark></b> karna hai <b><mark>mean</mark></b> yan
+      Console.log ko <b><mark>Double Quotes ( "" )</mark></b> yan is ky ander
+      Code ko <b><mark>Double Quotes ( "" )</mark></b> main likhna hai. Ager
+      dono ko Double Quotes ( "" ) main likhyn gay tu
+      <b><mark>Error</mark></b> aye ga. Ik ko
+      <b><mark>Double Quotes ( "" )</mark></b> main or ik ko
+      <b><mark>Single Quote ( '' )</mark></b> main likhna ho ga. <br />
+      <br />
+      <strong>Example:</strong> setTimeout("console.log('Hi! My Name is Abdul
+      Rehman')");</code
+    >
+    <br />
+    <hr />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Ager hum ny apny <b><mark>Code</mark></b> main ik
+      hi line main ik sy ziaada <b><mark>console.log</mark></b> likhny hoon tu
+      un ko <b><mark>Separate</mark></b> karny ky lye
+      <b><mark>Semicolon (;)</mark></b> lagana ho ga nai tu
+      <b><mark>Error</mark></b> aye ga. <br />
+      <br />
+      <strong>Example:</strong> setTimeout("console.log('Hi!')<b
+        ><mark>;</mark></b
+      >
+      console.log('I am Abdul Rehman')");</code
+    >
+    <br />
+    <hr />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Ager <b><mark>Multiple line</mark></b> likhni hoon
+      tu hum <b><mark>Backtick ( `` )</mark></b> ka use karyn gay or kuch is
+      tarah likhyn gay. Is main <b><mark>Semicolon (;)</mark></b> Zarori nai.<br />
+      <br />
+      <strong>Example:</strong> <br />
+      setTimeout(<b><mark>`</mark></b> <br />
+      console.log('Hi!') <br />
+      console.log('I am Abdul Rehman.') <br />
+      console.log('I am 23 years old.')<b><mark>`</mark></b
+      >);</code
+    >
+    <br />
+    <hr />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Ager hum pury <b><mark>Code</mark></b> ko
+      <b><mark>Console</mark></b> ky ander <b><mark>Run</mark></b> karyn tu
+      SetTimeout ki <b><mark>Return Value</mark></b> b ati hai. Yeh jo
+      <b><mark>Return Value</mark></b> hai SetTimeout main jo
+      <b><mark>Delay Time</mark></b> lagaya hai us ki
+      <b><mark>Id</mark></b> hai.</code
+    >
+    <br />
+    <hr />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Ager aik sy ziaad
+      <b><mark>SetTimeout</mark></b> lagayn tu sab sy
+      <b><mark>End</mark></b> waly ki <b><mark>Id</mark></b> Show ho gi.</code
+    >
+    <br />
+    <hr />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Hum <b><mark>SetTimeout</mark></b> ki Id ko aik
+      <b><mark>Variable</mark></b> main <b><mark>Store</mark></b> b kar sakty
+      hain.</code
+    >
+    <br />
+    <code
+      ><strong>Note!</strong> Ager hum us <b><mark>Variable</mark></b> ko
+      <b><mark>Run</mark></b> karyn gy tu <b><mark>Timer</mark></b> ki
+      <b><mark>Id</mark></b> Show ho gi.</code
+    >
+    <br />
+    <code
+      > <p class="timer-clear">ClearTimeout:</p>
+      <strong>Note!</strong> Ager hum ny kisi <b><mark>SetTimeout</mark></b> ko
+      <b><mark>Remove</mark></b> karna ho tu hum <b><mark>ClearTimeout</mark></b> ki Help sy
+      <b><mark>Remove</mark></b> kar sakty hain. <br />
+      <br />
+      <strong>Example:</strong> <br />
+      <b>const</b> timer1 = setTimeout(`console.log('Hi!-1')`, 1000) <br />
+      <b>const</b> timer2 = setTimeout(`console.log('Hi!-2')`, 2000)
+      <b>// Timer2 Run nai ho ga kio ky hum ny isy Remove kar dya</b> <br />
+      <b>const</b> timer3 = setTimeout(`console.log('Hi!-3')`, 3000) <br />
+      <br />
+
+      <b><mark>clearTimeout(timer2)</mark></b> <br />
+      <br />
+      <strong>Output:</strong> <br />
+      Hi!-1 <br />
+      Hi!-3
+    </code>
+    <br />
+    <hr />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Hum <b><mark>SetTimeout</mark></b> main
+      <b><mark>Function</mark></b> b <b><mark>pass</mark></b> kar Sakty hain.
+      <br />
+      <strong>Note!</strong> Or jis main <b><mark>Function Pass</mark></b> Karyn
+      gy wo aik <b><mark>Higher Order Function</mark></b> ban jye ga. <br />
+      <br />
+      <strong>Example:</strong> <br />
+      const timer1 = setTimeout(`console.log('Hi!-1')`, 1000) <br />
+      const timer2 = setTimeout(`console.log('Hi!-2')`, 2000) <br />
+      const timer3 = setTimeout(<b><mark>test</mark></b
+      >, 3000) <b><mark>// This setTimeout is Higher Order Function</mark></b>
+      <br /> <br>
+
+      function <b><mark>test()</mark></b
+      >{ <br />
+      console.log("Salam"); <br />
+      } <br />
+      <br />
+      <strong>Output:</strong> <br />
+      Hi!-1 <br />
+      Hi!-2 <br />
+      <b><mark>Salam</mark></b>
+    </code>
+    <br />
+    <hr />
+    <br />
+
+    <h1>SetInterval</h1>
+    <h2>Definition:</h2>
+    <p>
+      SetInterval <b>repeatedly executes</b> a function with a fixed interval.
+      SetInterval is suitable for <b>recurring tasks</b>.
+    </p>
+
+    <code>
+      <strong>Example:</strong> <br />
+      const timer1 = setInterval(`console.log('Hi!-1')`, 1000) <b>// This code will run after every Second</b> <br />
+      const timer2 = setInterval(`console.log('Hi!-2')`, 2000) <b>// This code will run after every two second</b>  <br />
+      const timer3 = setInterval(<b><mark>test</mark></b
+      >, 3000) <b>// This code will run after every three second</b> <br> <b><mark>// This Timer3 is Higher Order Function</mark></b>
+      <br /> <br>
+
+      function <b><mark>test()</mark></b
+      >{ <br />
+      console.log("Salam"); <br />
+      } <br />
+      <br />
+      <strong>Output:</strong> <br />
+      Hi!-1 <br />
+      Hi!-2 <br />
+      <b><mark>Salam</mark></b>
+    </code>
+    <br />
+    <hr />
+    <br />
+
+    <code
+      > <p class="timer-clear">ClearInterval:</p>
+      <strong>Note!</strong> Ager hum ny kisi <b><mark>SetInterval</mark></b> ko
+      <b><mark>Remove</mark></b> karna ho tu hum <b><mark>ClearInterval</mark></b> ki Help sy
+      <b><mark>Remove</mark></b> kar sakty hain. <br />
+      <br />
+      <strong>Example:</strong> <br />
+      <b>const</b> timer1 = setInterval(`console.log('Hi!-1')`, 1000)
+      <b><mark>// Timer1 Run nai ho ga kio ky hum ny isy Remove kar dya</mark></b> <br />
+      <b>const</b> timer2 = setInterval(`console.log('Hi!-2')`, 2000) <b>// Run after every two second</b> <br>
+      <b>const</b> timer3 = setInterval(`console.log('Hi!-3')`, 3000) <b>// Run after every three second</b> <br />
+      <br />
+
+      <b><mark>clearInterval(timer1)</mark></b> <br />
+      <br />
+      <strong>Output:</strong> <br />
+      Hi!-2 <br />
+      Hi!-3
+    </code>
+    <br />
+    <hr />
+    <br />
+    <script src="script.js"></script>
+  </body>
+</html>

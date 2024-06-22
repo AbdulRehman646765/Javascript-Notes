@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some and Every Method</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Some and Every array Method</h1>
+    <h1>Some array Method</h1>
+    <p>Some array Method main ager <b>Truthy value</b> define karyn tu result <b><mark>True</mark></b> aye ga. Ager <b>Falsy Value</b> define karyn tu result <b><mark>False</mark></b> aye ga.</p>
+    <p>Ager is main <b>multiple values</b> <b><mark>(Truthy and Falsy)</mark></b> define karyn tu isy jesy hi <b><mark>Truthy Value</mark></b> mily gi tu result main <b><mark>True</mark></b> print kar dy ga. or yeh baqi <b><mark>Falsy Values</mark></b> ko nai dekhy ga.</p>
+    <h1>Some array Method Syntax:</h1>
+    <pre>
+        array.some(function(value, index, arr), this)
+        <h2>Parameters:</h2>
+      <b>function()</b>
+                <b>Required.</b>
+                A function to run for each array element.
+      <b>Value</b>
+                <b>Required.</b>
+                The value of the current element.
+      <b>index</b>
+                <b>Optional.</b>
+                The index of the current element.
+      <b>arr</b>
+                <b>Optional.</b>
+                The array the current element belongs to.
+      <b>this</b>
+                <b>Optional. Default undefined.</b>
+                A value passed to the function to be used as its "this" value.
+    </pre>
+
+    <h1>Some Examples:</h1>
+    <h2>Even Numbers Example <span class="head-span">with Truthy value</span></h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const evenNumbers = [0,2,4,6,8];
+
+      const result = evenNumbers.<b><mark>some</mark></b>((num) => {
+        return num > 4 <b>// yan par yeh <mark>"0,2 aur 4"</mark> ky lye <mark>False</mark> aur <mark>"6 aur 8"</mark> ky lye <mark>True</mark> ho ga.</b>
+      })
+      console.log(result); <b>// The Result is <mark>"True"</mark></b>
+    </pre>
+
+    <h2>Even Numbers Example <span class="head-span">with Falsy value</span></h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+      
+      const evenNumbers = [2, 4, 6, 8, 9];
+
+      const result = evenNumbers.<b><mark>some</mark></b>((num) => {
+        return 0 <b>// <mark>"0"</mark> is a Falsy value.</b>
+      });
+      console.log(result); <b>// The Result is <mark>"False"</mark></b>
+    </pre>
+    <hr>
+
+    <h1>Every array Method</h1>
+    <p>Opposite of some() array Method</p>
+    <p>Every array Method main ager <b>Truthy value</b> define karyn tu result <b><mark>True</mark></b> aye ga. Ager <b>Falsy Value</b> define karyn tu result <b><mark>False</mark></b> aye ga.</p>
+    <p>Ager is main <b>multiple values</b> <b><mark>(Truthy and Falsy)</mark></b> define karyn tu isy jesy hi <b><mark>Falsy Value</mark></b> mily gi tu result main <b><mark>False</mark></b> print kar dy ga. or yeh baqi <b><mark>Truthy Values</mark></b> ko nai dekhy ga.</p>
+    <h1>Every array Method Syntax:</h1>
+    <pre>
+      array.every(function(currentValue, index, arr), thisValue)
+      <h2>Parameters:</h2>
+      <b>function()</b>
+                <b>Required.</b>
+                A function to be run for each element in the array. 
+      <b>currentValue</b>
+                <b>Required.</b>
+                The value of the current element.
+      <b>index</b>
+                <b>Optional.</b>
+                The index of the current element.
+      <b>arr</b>
+                <b>Optional.</b>
+                The array of the current element.
+      <b>thisValue</b>
+                <b>Optional. Default undefined.</b>
+                A value passed to the function as its this value.
+    </pre>
+
+    <h1>Some Examples:</h1>
+    <h2>Another Example <span class="head-span">with multiple values</span></h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const evenNumbers = [2,4,6,8,10];
+
+      const result = evenNumbers.<b><mark>every</mark></b>((num) => {
+        return num < 8; <b>// yan par yeh <mark>"0,2 aur 4"</mark> ky lye <mark>True</mark> aur <mark>"6 aur 8"</mark> ky lye <mark>False</mark> ho ga.</b>
+      });
+      console.log(result); <b>// The Result is <mark>"False"</mark></b>
+    </pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>

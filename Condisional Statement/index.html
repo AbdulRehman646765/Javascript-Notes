@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="main-title">Conditional Statement in JavaScript</h1>
+
+    <h1>Conditional Statement</h1>
+    <h2>Syntax Of Conditional Statement</h2>
+    <pre>
+        if (condition1) {
+            //  block of code to be executed if condition1 is true
+          } else if (condition2) {
+            //  block of code to be executed if the condition1 is false and condition2 is true
+          } else {
+            //  block of code to be executed if the condition1 is false and condition2 is false
+          }
+    </pre>
+
+    <h2>Some Examples</h2>
+    <h3>Driving Example</h3>
+    <pre>
+      <strong>Example:</strong> Below is an Example
+
+      let a = prompt("Hey whats your age?")
+      a = Number.parseInt(a); // Converting the string to a number
+      if(<b>a<0</b>){
+        console.log("This is an invalid age");
+      }
+      else if(<b>a<9</b>){
+        console.log("You are a kid and you cannot even think of driving");
+      }
+      else if(<b>a<18</b> <b>&& a>=9</b> ){
+        console.log("You are a kid and you can think of driving after 18")
+      }
+      else{
+        console.log("You can now drive as you are above 18");
+      }
+      console.log("You can", ( <b>a<18</b> ? "Not Drive" : "Drive"))
+    </pre>
+    <hr>
+    <h3>Even and Odd Number Example</h3>
+    <pre>
+      <strong>Example:</strong> Below is an Example
+
+      let num = prompt("Number")
+      num = Number.parseInt(num);
+      if(<b>num%2 == 0</b>){
+        console.log(<b>"This Number is even"</b>);
+      }
+      else{
+        console.log(<b>"This Number is odd"</b>);
+      }
+    </pre>
+
+
+    <script src="conditional_statement.js"></script>
+</body>
+</html> 

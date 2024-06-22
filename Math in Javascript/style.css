@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Jost:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap');
+
+/* font-family: "Bangers", system-ui; */
+/* font-family: "Jost", sans-serif; */
+/* font-family: "Courgette", cursive; */
+/* font-family: "Protest Riot", sans-serif; */
+
+.main-title{
+    font-size: 45px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 450px;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+h1,h2,h3{
+    font-family: "Jost", sans-serif;
+}
+
+ul li, ol li{
+    font-family: "Protest Riot", sans-serif;
+    line-height: 50px;
+    font-size: 23px;
+
+} 

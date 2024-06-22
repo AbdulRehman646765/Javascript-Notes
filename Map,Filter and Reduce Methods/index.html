@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map,Filter and Reduce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="main-title">ForEach, Map, Filter and Reduce in JavaScript</h1>
+
+    <h1>ForEach Array Method</h1>
+    <h1>ForEach loop Syntax:</h1>
+    <pre>
+      array.forEach(function(currentValue, index, arr), thisValue)
+      <h2>Parameters:</h2>
+      <b>function()</b>
+                <b>Required.</b>
+                A function to run for each array element.
+      <b>currentValue</b>
+                <b>Required.</b>
+                The value of the current element.
+      <b>index</b>
+                <b>Optional.</b>
+                The index of the current element.
+      <b>arr</b>
+                <b>Optional.</b>
+                The array of the current element.
+      <b>thisValue</b>
+                <b>Optional. Default undefined.</b>
+                A value passed to the function as its this value.
+    </pre>
+
+    <h1>Some Examples:</h1>
+    <h2>
+      Books Example
+      <span class="head-span">with anonymous function and arrow function</span>
+    </h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+        const books = ["Urdu", "English", "Islamic Studies", "Physics", "Chemistry"];
+
+        books.forEach((book) => {
+          console.log(book);
+        })
+    </pre>
+
+    <h2>Animals Example <span class="head-span">with named function</span></h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+        const animals = ["Horse", "Cat", "Dog", "Tiger", "Lion"];
+
+        function <b><mark>abc</mark></b>(el){
+          console.log(el)
+        }
+        animals.<b>forEach(abc) </b>
+
+      <strong>Note!</strong> Named function itna common nai hai jitna anonymous function common hai. 
+    </pre>
+
+    <h2>
+      Another ForEach Example <span class="head-span">with return value</span>
+    </h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+        const vegetables = ["Potato", "Cucumber", "Beetroot", "Garlic", "Ginger"];
+        const sample = vegetables.forEach((vegetable) => {
+          console.log(vegetable);
+          <b><mark>return</mark></b> vegetable; <b>// isy hum ny Return kia hai phir b undefined aa raha hai kio ky ForEach kuch b Return nai karta.</b>
+        });
+
+        console.log(sample)
+
+      <strong>Output:</strong>
+
+      <b>Potato</b>
+      <b>Cucumbe</b>
+      <b>Beetroo</b>
+      <b>Garlic</b>
+      <b>Ginger</b>
+      <b><mark>undefined</mark></b> // This is Return value output
+    </pre>
+    <hr />
+
+    <h1>Map:</h1>
+    <p>
+      <b>Map</b> aur <b>ForEach</b> dono same hi hain. <b>Difference</b> sirf
+      itna hai ky <b><mark>Map</mark></b> ki return value hoti hai lekin
+      <b><mark>ForEach</mark></b> ki return value nai hoti.
+    </p>
+    <h2>Map Syntax:</h2>
+    <pre>
+        array.map(function(currentValue, index, arr), thisValue)
+        <h2>Parameters:</h2>
+      <b>function()</b>
+                <b>Required.</b>
+                A function to run for each array element.
+      <b>currentValue</b>
+                <b>Required.</b>
+                The value of the current element.
+      <b>index</b>
+                <b>Optional.</b>
+                The index of the current element.
+      <b>arr</b>
+                <b>Optional.</b>
+                The array of the current element.
+      <b>thisValue</b>
+                <b>Optional. Default undefined.</b>
+                A value passed to the function as its this value.
+    </pre>
+
+    <h1>Some Examples:</h1>
+    <h2>Days Example</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
+        const mapExample = days.<b>map</b>(function(day){
+          console.log(day);
+        });
+        console.log(<b>mapExample</b>);
+
+        
+        Return Output:
+
+        <b><mark>(7) [undefined, undefined, undefined, undefined, undefined, undefined, undefined]</mark></b>
+
+      <strong>Note!</strong> <b><mark>mapExample variable</mark></b> main is ki return value save hai. ager hum is variable ko access karyn gy tu return value <b><mark>show</mark></b> 
+             ho gi.
+
+      <strong>Note!</strong> ager hum kuch b return nai karyn gy tu return main aik array aye ga kis main har value ko undefined print kary ga.
+    </pre>
+
+    <h2>Another Example <span class="head-span">with Return value</span></h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
+        const capitalMonths = days.map(function(day){
+          console.log(day);
+          <b><mark>return</mark></b> day.toUpperCase();
+        });
+        console.log(<b>capitalMonths</b>);
+
+
+        Return Output:
+
+        <b><mark>(7) ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']</mark></b>
+
+      <strong>Note!</strong> is main hum ny days ko upperCase return kia hai. jis ki return value <b><mark>capitalMonths variable</mark></b> main save hai. 
+             ager hum is variable ko access karyn gy tu return value <b><mark>show</mark></b> ho gi.
+
+      <strong>Note!</strong> Yeh aik <b><mark>new array create</mark></b> kar ky deta hai. Original array main koi b <b><mark>change</mark></b> nai karta. jesa ky is example main jo 
+             <b><mark>capitalMonths</mark></b> variable hai is main sab values Capital hain. lekin <b><mark>days</mark></b> variable main sab vesi hain values hain jesi 
+              hum ny create ki hain.
+       
+      <strong>Note!</strong> In methods ko <b><mark>non distracted methods</mark></b> kehtay hain. mean ky yeh Original array ko <b><mark>Destroy</mark></b> nai karta.        
+    </pre>
+
+    <h2>How to define array's index</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const fruits = ["Apple", "Banana", "Peach", "Mango", "Orange"];
+      fruits.map((fruit, index, <b><mark>arr</mark></b>) => {
+        // console.log(index + 1 ,fruit);
+        console.log(<b><mark>arr</mark></b>);
+      })
+    </pre>
+
+    <h1>Filter</h1>
+    <code
+      ><strong>Note!</strong> Filter method <b><mark>True</mark></b> aur
+      <b><mark>False</mark></b> values ky hesaab sy print karta hai. Jis value
+      ky lye <b><mark>False</mark></b> ho ga usy <b><mark>skip</mark></b> kar dy
+      ga. or jis ky lye <b><mark>True</mark></b> ho ga usy
+      <b><mark>Print</mark></b> kary ga.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Yahan par yeh <b><mark>True</mark></b> aur
+      <b><mark>False</mark></b> nai print kar raha. Balky jis ky lye
+      <b><mark>True</mark></b> aur <b><mark>False</mark></b> hai usy print kar
+      raha hai.</code
+    >
+
+    <h2>Filter Syntax:</h2>
+    <pre>
+      array.filter(function(currentValue, index, arr), thisValue)
+    </pre>
+
+    <h1>Some Examples:</h1>
+    <h2>vegetables Example</h2>
+
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const vegetables = ["Garlic", "Ginger", "Onion", "Cucumber", "Tomato"];
+      const filteredVegetables = vegetables.<b><mark>filter</mark></b>((vegetable) => {
+        console.log(vegetable, ":" ,vegetable.length);
+        return vegetable.length < 7;  
+      });
+      console.log(filteredVegetables); <b>// all values returned but <mark>cucumber value skipped</mark>. because cucumbers value length is 8.</b>
+    </pre>
+
+    <h2>Another Example</h2>
+    <pre>
+      <strong>Note!</strong> Below is an example.
+
+      const vegetables = ["Garlic", "Ginger", "Onion", "Cucumber", "Tomato"];
+      const filteredVegetables = vegetables.filter((vegetable) => {
+        console.log(vegetable);
+        return vegetable.toLocaleUpperCase().includes("O") <b>// is main hum jo b word print karyn gy. wo word jis jis value main
+                                                              ho ga wo value print ho jye gi.</b>
+      });
+      console.log(filteredVegetables); <b>// The Result is "(2) ['Onion', 'Tomato']"</b>
+    </pre>
+
+    <h2>Filter index Example</h2>
+    <pre>
+      <strong>Note!</strong> Below is an example.
+
+      const vegetables = ["Garlic", "Ginger", "Onion", "Cucumber", "Tomato"];
+      const filteredVegetables = vegetables.filter((vegetable, <b><mark>index</mark></b>) => {
+        console.log(index, vegetable);
+        return vegetable, <b><mark>index > 2</mark></b>; 
+      });
+      console.log(filteredVegetables); <b>// The Result is "(2) ['Cucumber', 'Tomato']"</b>
+    </pre>
+
+    <h2>Separate adult Students in some students</h2>
+    <pre>
+      <strong>Note!</strong> Below is an example.
+
+      const students = [
+        {
+          name: "Ali Hassan",
+          age: 29,
+        },
+        {
+          name: "Bilal Hassan",
+          age: 27,
+        },
+        {
+          name: "Abdul Rehman",
+          age: 18,
+        },
+        {
+          name: "Qasim Hussain",
+          age: 17,
+        },
+        {
+          name: "Baber",
+          age: 15,
+        },
+      ];
+ 
+      const adultStudent = students.filter((student) => {
+        console.log(student);
+        <b><mark>return student.age >= 18 </mark></b>;
+      });
+      console.log(adultStudent); <b>// The Result is 
+                                     "0: {name: 'Ali Hassan', age: 29}
+                                      1: {name: 'Bilal Hassan', age: 27}
+                                      2: {name: 'Abdul Rehman', age: 18}"</b>
+
+    <h2>Only value's name print</h2>
+      const adultStudentName = adultStudent.map((student) => {
+        return student<b><mark>.name </mark></b>
+      })
+      console.log(adultStudentName); <b>// The Result is "(3) ['Ali Hassan', 'Bilal Hassan', 'Abdul Rehman']"</b>
+  </pre>
+
+    <h2>Chaining array method</h2>
+    <pre>
+      <strong>Note!</strong> Below is an example.
+
+      const students = [
+        {
+          name: "Ali Hassan",
+          age: 29,
+        },
+        {
+          name: "Bilal Hassan",
+          age: 27,
+        },
+        {
+          name: "Abdul Rehman",
+          age: 18,
+        },
+        {
+          name: "Qasim Hussain",
+          age: 17,
+        },
+        {
+          name: "Baber",
+          age: 15,
+        },
+      ];
+      const adultStudent = students.filter((student) => {
+        return student.age >= 18; <b>// is sy jin ki age <mark>18 yan 18 sy above</mark> ho gi wo print ho jyn gy.</b>
+
+      }).map((student) => {
+        return student.name; <b>// is sy jo print howy un ky <mark>name</mark> aa jyn gy. age remove ho jye gi.</b>
+
+      }).filter((student) => {
+        return student.includes("A"); <b>// Phir jo jo print howy un main sy sirf un ka name aye ga. jin main <mark>"A Capital"</mark> ho ga.</b>
+
+      }).map((student) => {
+        return student.toUpperCase(); <b>// Phir is sy un ka name <mark>upperCase</mark> main convert ho jye ga.</b>
+      });
+
+      console.log(adultStudent); <b>// The Result is "<mark>(2) ['ALI HASSAN', 'ABDUL REHMAN']</mark>"</b>
+    </pre>
+    <hr>
+
+    <h1>Reduce</h1>
+    <h2>Syntax of Reduce:</h2>
+    <pre>
+      array.reduce(function(total, currentValue, currentIndex, arr), initialValue)    
+    <h2>Parameters:</h2>
+      <b>function()</b>
+                <b>Required.</b>
+                A function to be run for each element in the array.
+      <b>total</b>
+                <b>Required.</b>
+                The initialValue, or the previously returned value of the function.
+      <b>currentValue</b>
+                <b>Required.</b>
+                The value of the current element.
+      <b>currentIndex</b>
+                <b>Optional.</b>
+                The index of the current element.
+      <b>arr</b>
+                <b>Optional.</b>
+                The array the current element belongs to.
+      <b>initialValue</b>
+                <b>Optional.</b>
+                A value to be passed to the function as the initial value.
+    </pre>
+
+    <h1>Some Examples</h1>
+    <h2>Numbers Example</h2>
+    <pre>
+      <strong>Note!</strong> // ager hum initial value main kuch bhi pass karyn gy tu wo accumulator ki first value ho jye gi. ager kuch b pass 
+                na karyn tu first value wo hi ho gi jo hum ny array main define ki.
+
+      const numbers = [1,2,3];
+      numbers.reduce((accumulator, current, index) => {
+        console.log(accumulator, current);
+        return accumulator + current;
+      }, 0) <b>// <mark>"0"</mark> aik initial value hai.</b>
+      console.log(sum);
+
+      <strong>Output:</strong>
+      
+  <b>"0 1" : // <mark>"0"</mark> accumulator ki value hai. aur <mark>"1"</mark> current value hai. <mark>0 aur 1</mark> plus ho ga tu accumulator ki value <mark>"1"</mark> ho jye gi.
+  "1 2" : // <mark>"1"</mark> accumulator ki value hai. aur <mark>"2"</mark> current value hai. <mark>1 aur 2</mark> plus ho ga tu accumulator ki value <mark>"3"</mark> ho jye gi.
+  "3 3" : // <mark>"3"</mark> accumulator ki value hai. aur dosra <mark>"3"</mark> current value hai. <mark>3 aur 3</mark> plus ho ga tu accumulator ki value <mark>"6"</mark> ho gi.
+  "6" : // <mark>"6"</mark> accumulator ki value hai. </b>
+
+  <strong>Note!</strong> sab sy end wali value ka output <b><mark>reduce method</mark></b> khud sy create karta hai. Ager usy show karwana ho tu usy aik variable
+         main save karyn gy. jesa kay hum ny <b><mark>"sum"</mark></b> name sy variable create kia hai.
+    </pre>
+
+    <h2>Yeh sab Methods loop karty hain. ager hamy sirf loop karwana ho tu hum ForEach Method ka use karyn gy. ager koi or specific kaam karwana hai tu hum in sab Methods ka use karty hain.</h2>
+
+    
+
+      
+
+    <script src="script.js"></script>
+  </body>
+</html>

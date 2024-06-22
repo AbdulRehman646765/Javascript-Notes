@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="main-title">Logical Operators in JavaScript</h1>
+
+    <h1>Logical Operators</h1>
+    <ol class="logical_operators">
+      <li><b>&&</b> (And)</li>
+      <h3>
+        is condition main 2nu variables <mark>(isSchoolStudent & isCollegeStudent)</mark> equal mean <mark>True</mark> hony zaroori hain nai tu result <mark>False</mark> aye ga. <br />
+      </h3>
+
+      <h2>Some Examples</h2>
+      <pre>
+            const userAge = 18;
+            const isSchoolStudent = (userAge >= 5) && (userAge <= 18); <b>// True Value</b>
+            const isCollegeStudent = (userAge >= 18) && (userAge <= 25); <b>// True Value</b>
+            const isStudent = isSchoolStudent <b><mark>&&</mark></b> isCollegeStudent;
+            console.log(isStudent);
+        </pre
+      >
+
+      <li><b>||</b> (Or)</li>
+      <h3>
+        is condition main 2nu variables <mark>(isSchoolStudent & isCollegeStudent)</mark> main sy ager 1 b <mark>True</mark> ho tu result <mark>True</mark> aye ga. <br />
+      </h3>
+      <h2>Some Examples</h2>
+      <pre>
+            const userAge = 25;
+            const isSchoolStudent = (userAge >= 5) && (userAge <= 18); <b>// False Value</b>
+            const isCollegeStudent = (userAge >= 18) && (userAge <= 25); <b>// True Value</b>
+            const isStudent = isSchoolStudent <b><mark>||</mark></b> isCollegeStudent;
+            console.log(isStudent);
+        </pre
+      >
+
+      <li><b>!</b> (Not)</li>
+      <h3>
+        yeh operator <mark>"!"</mark> Truthy value ko <mark>False</mark> or Falsy value ko
+        <mark>True</mark> kar deta hai. <br />
+      </h3>
+      
+      <h2>Some Examples</h2>
+        <pre>
+            const userAge = 25;
+            const isSchoolStudent = (userAge >= 5) && (userAge <= 18); <b>// False Value</b>
+            console.log(<b><mark>!</mark></b>isSchoolStudent); <b>// True Value</b> 
+            const isCollegeStudent = (userAge >= 18) && (userAge <= 25); <b>// True Value</b>
+            console.log(<b><mark>!</mark></b>isCollegeStudent); <b>// False Value</b>
+        </pre>
+    </ol>
+
+    <script src="logical_operators.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arguments Keyword</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Arguments Keyword in JavaScript</h1>
+    <h1>Arguments Keyword</h1>
+    <p>
+      jab hum function ko call karyn gy tu us main pehle
+      <b>parameters ka result</b> aye ga phir arguments ki values
+      <b>array like object</b> main aye gi.
+    </p>
+		<p>Arguments Keyword ko hum <b><mark>Named Function</mark></b> aur <b><mark>Anonymous Function</mark></b> main pass kar sakty hain, But <b><mark>Arrow Function</mark></b> main use nai kar sakty.</p>
+
+    <h1>Some Examples:</h1>
+    <h2>Add Numbers Example <span class="head-span">with Named Function</span></h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        function add(a,b){
+            <b>console.log(arguments);</b>
+            console.log(a + b);	 
+        }
+        add(5,6) <b>// The result is <mark>"11"</mark></b>
+    </pre>
+
+    <h2>Subtract Numbers Example <span class="head-span">with Anonymous Function</span></h2>
+    <p>
+      Ager hum ny jitny b <b>parameters define</b> kye un sy ziaada arguments
+      <b>pass</b> karyn. tu jitny parameters define kye un ka tu
+      <b><mark>result</mark></b> aa jye ga or baqi arguments
+      <b><mark>skip</mark></b> ho jyen gy.
+    </p>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        const subtract = function(a,b){
+            console.log(arguments);
+            console.log(a - b);	 
+        }
+        subtract(<b>10,8,7,9</b>) <b>// The result is <mark>"2"</mark></b>
+
+        <strong>Note!</strong> is example main <b><mark>"10 aur 8"</mark></b> ka result tu aya or baqi dono arguments <b><mark>skip</mark></b> ho gye.
+    </pre>
+
+    <h2>Square Numbers Example <span class="head-span">with Arrow Function</span></h2>
+		<code><strong>Note!</strong> <b><mark>Cannot access it</mark></b></code>
+<pre>
+	<strong>Example:</strong> Below is an example.
+
+	const square = (num) => {
+		console.log(arguments); <b>// <mark>Error:</mark> arguments is not defined at square</b>
+		console.log(num * num);
+	}
+	square(12)			
+</pre>
+
+    <h2>Ager arguments ko access karna ho</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        function subtract() {
+            console.log(arguments<b>[0]</b>);
+            console.log(arguments<b>[1]</b>);
+            console.log(arguments<b>[2]</b>);
+            console.log(arguments<b>[3]</b>);
+        }
+        subtract(7,2,8,5)
+
+        <strong>Output:</strong>
+
+        <b>7
+        2
+        8
+        5</b>
+    </pre>
+
+    <h2>
+      Arguments Keyword Example <span class="head-span">with For loop</span>
+    </h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        function add() {
+          let sum = 0
+          <b>for (let i = 0; i < arguments.length; i++) {</b>
+          <b>sum += arguments[i];</b>
+          <b>}</b>
+          return sum;
+        }
+        const result = add(10,20,500,120,100,36);
+        console.log(result); <b>// The Result is <mark>"786"</mark></b>
+
+<strong>Note!</strong> Yan par hum ny <b>multiple arguments</b> pass kye or hum in ko <b>use</b> b kar sakty hain. Lekin <b>parameter</b> aik bhi define nai kya.
+       Or yeh sab kuch hum <b><mark>Arguments Keyword</mark></b> ki help sy kar rahy hain.
+    </pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>

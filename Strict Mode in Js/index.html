@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict Mode in JavaScript</title>
+    <!-- Css Code....................................................... -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Jost:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap");
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 20px;
+        border: 2px solid black;
+      }
+
+      .main-title{
+    font-size: 45px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 50%;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+
+      h1,
+      h2 {
+        font-family: "Jost", sans-serif;
+      }
+      pre,
+      code {
+        font-size: 17px;
+        line-height: 25px;
+      }
+      strong {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-title">Strict Mode in JavaScript</h1>
+
+    <h1>Strict Mode in JavaScript</h1>
+    <code
+      ><strong>Note!</strong> Strict Mode sy hamy
+      <b><mark>Syntax errors</mark></b> ka pata chal jata hai. Ager hum ny Code
+      main koi <b><mark>Mistakes</mark></b> kar di tu yeh Hamy bata hai ky ap ny
+      kahan par Mistake ki hai.</code
+    >
+    <br />
+
+    <h2>Syntax Of Strict Mode: ( <mark>"use strict"</mark> )</h2>
+    <h2>Some Examples Of Strict Mode:</h2>
+    <pre>
+        a = 10;
+        console.log(a); <b>// The result is <mark>"10"</mark></b>
+
+        function test(){
+            <b>"use strict";</b>   
+            b = 20;
+            console.log(b); <b>// The result is <mark>"b is not defined at test"</mark></b>
+        }
+        test()
+
+        function test1(){
+            <b>"use strict";</b>   
+            <b><mark>let</mark></b> c = 30;
+            console.log(c); <b>// The result is <mark>"30"</mark></b>
+        }
+        test1()
+
+        <strong>Note!</strong> In examples sy yeh baat Clear ho gai. Hum ny <b><mark>"a"</mark></b> sy pehly <b><mark>Strict Mode</mark></b> use ni kia tu <b><mark>Error</mark></b> ni mila. But hum ny <br>        Function ky ander <b><mark>"b"</mark></b> sy pehly <b><mark>Strict Mode</mark></b> use kia tu <b><mark>Error</mark></b> mila.
+
+        <strong>Note!</strong> Yeh Error is lye mily kio ky hum ny Variables ko <b><mark>"Declare"</mark></b> ni kia. 
+    </pre>
+
+    <!-- JavaScript Code................................................ -->
+    <script>
+      // Use Strict Mode....................
+      a = 10;
+      console.log(a);
+
+      function test() {
+        // "use strict";
+        b = 20;
+        console.log(b);
+      }
+      test();
+      function test1() {
+        "use strict";
+        let c = 30;
+        console.log(c);
+      }
+      test1();
+    </script>
+  </body>
+</html>

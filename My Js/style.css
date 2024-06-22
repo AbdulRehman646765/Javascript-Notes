@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background :rgba(0, 0, 0, 0.7)url(img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 100px;
+}
+.calculator-box{
+  position: relative;
+  border-bottom: 5px solid #00b0a4;
+  border-radius: 30px;
+  padding-top: 130px;
+  background-color: #343c4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#input-box{
+  width: 292px;
+  height: 110px;
+  border: none;
+  background-color: transparent;
+  color: #00b0a4;
+  font-size: 52px;
+  text-align: right;
+  font-family: "Alata", sans-serif;
+  outline: none;
+}
+#input-box::placeholder{
+  color: #00b0a4;
+}
+button{
+  width: 70px;
+  height: 70px;
+  box-shadow: 3px, 5px, 15px, #00b0a4;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-family: "Alata", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+.ac-btn,.del-btn{
+  font-size: 18px;
+}
+.operator{
+  background-color: #24454f;
+  color: #01e3d4;
+  transition: 0.3s;
+}
+.operator:hover{
+  background-color: #00b0a4;
+  color: white;
+}
+.equal-btn{
+  background-color: #00b0a4;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+.top-btn{
+  color: #03bfb3;
+}
+.top-row{
+  border: 1.5px solid #00b0a4;
+  width: 100%;
+}
+.bottom-row{
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 3px;
+  background-color: white;
+}
+.hamburger .line{
+  width: 18px;
+  margin: 2px;
+  border-bottom: 2px solid white;
+}
+.hamburger{
+  background-color: #00b0a4;
+  width: 60px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 12px;
+}
+.top-head{
+  color: #00b0a4;
+  font-family: "Alata", sans-serif;
+  font-weight: 200;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  text-shadow:0 0 5px #00b5a9;
+}
+.percentage-btn{
+  color: #03bfb3;
+}
+.my-intro{
+  color: white;
+  font-family: "Alata", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-intro h1{
+  font-size: 50px;
+  -webkit-text-stroke: 0.1px white;
+  -webkit-text-fill-color: transparent;
+}
+.my-intro h2{
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  text-align: center;
+}
+.my-intro span{
+  color: #00b0a4;
+  text-shadow: 0 0 3px #01e3d4;
+}

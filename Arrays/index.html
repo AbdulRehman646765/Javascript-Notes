@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Arrays in JavaScript</h1>
+    <!-- Arrays Define................................................      -->
+    <h1>Arrays in JavaScript</h1>
+    <li><code>Arrays</code></li>
+    <h3>
+      With the help of an array, we can store more than one element under a
+      single name.
+    </h3>
+
+    <!-- Syntax Of Arrays.............................................       -->
+    <h2>Syntax Of Arrays</h2>
+    <pre>
+      const arrayName = ["Value1", "Value", "Value", .....]
+    </pre>
+
+    <h2>Fruits Collection Array's Example</h2>
+    <pre>
+    <strong>Example:</strong> Below is an example.
+
+      const fruitsCollection = ["Apple", "Banana", "Grape", "Mango"]
+      
+      console.log(fruitsCollection); <b>// The Result is "(4) ['Apple', 'Banana', 'Grape', 'Mango']"</b>
+    </pre>
+
+    <h2>Vegetables Collection Array's Example</h2>
+    <pre>
+    <strong>Example:</strong> Below is an example.
+
+      const vegetablesCollection = ["Ginger", "Garlic", "Potato", "Carrot"];
+
+      console.log(vegetablesCollection); <b>// The Result is "(4) ['Ginger', 'Garlic', 'Potato', 'Carrot']"</b>
+    </pre>
+
+    <h2>Rainbow Color Array's Example</h2>
+    <pre>
+    <strong>Example:</strong> Below is an example.
+
+      const rainbowColors = [
+        "Red",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Blue",
+        "Indigo",
+        "Violet"
+      ]
+      console.log(rainbowColors);
+      <b>// The Result is "(7) ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']"</b>
+    </pre>
+
+    <h2>Index Of Arrays in JavaScript</h2>
+    <pre>
+      const vegetablesCollection = ["Ginger", "Garlic", "Potato", "Carrot"];
+      console.log(vegetablesCollection);
+      console.log(vegetablesCollection[1]) <b>// The Result is "Garlic"</b>
+    </pre>
+
+    <h2>Update Value after Make Array</h2>
+    <pre>
+      const vegetablesCollection = ["Giner", "Garlic", "Potato", "Carrot "];
+      <b>// Before Update Result</b>
+      console.log(vegetablesCollection); // The Result is "(4) ['Ginger', 'Garlic', 'Potato', 'Carrot']"
+      console.log(vegetablesCollection[2] = "Spinach")<b> // Update Value Place for Potato</b> 
+      <b>// After Update Result</b>
+      console.log(vegetablesCollection); // The Result is "(4) ['Ginger', 'Garlic', <b>'Spinach'</b>, 'Carrot']"
+    </pre>
+
+    <h2>Array Into Array</h2>
+    <pre>
+      const animalsName = [
+      "Horse",
+      "Cat",
+      "Rabbit",
+      <b>["Lion", "Elephant", "Cow", "Sheep", "Goat", "Parrot"]</b>
+      ]
+      console.log(animalsName); <b>// The Result is "(4) ['Horse', 'Cat', 'Rabbit', Array(6)]"</b>
+    </pre>
+
+    <h2>Add Value After Make Array</h2>
+    <pre>
+      const booksName = ["Urdu", "English", "Islamic Studies", "Pak Studies"]
+      <b>// Before Add Value Result</b>
+      console.log(booksName); // The Result is "(4) ['Urdu', 'English', 'Islamic Studies', 'Pak Studies']
+      <b>booksName[4] = "Math"</b>
+      <b>// After Add Value Result</b>
+      console.log(booksName); // The Result is "(5) ['Urdu', 'English', 'Islamic Studies', 'Pak Studies', <b>'Math'</b>]"
+    </pre>
+
+    <h2>We Can add Value for This Way But It's Not Common</h2>
+    <pre>
+      const booksName = ["Urdu", "English", "Islamic Studies", "Pak Studies"]
+      <b>// Before Add Value Result</b>
+      console.log(booksName); // The Result is "(4) ['Urdu', 'English', 'Islamic Studies', 'Pak Studies']
+      <b>booksName[booksName.length] = "Arabic"</b>
+      <b>// After Add Value Result</b>
+      console.log(booksName); // The Result is "(5) ['Urdu', 'English', 'Islamic Studies', 'Pak Studies', <b>'Arabic'</b>]"
+    </pre>
+    <h2>Key Value Pairs in Arrays</h2>
+    <pre>
+      const user = []
+      user.firstName = "Abdul"
+      user.lastName = "Rehman"
+      console.log(user); <b>// The Result is "[firstName: 'Abdul', lastName: 'Rehman']"</b>
+    </pre>
+
+    <h2>Array Methods in JavaScript</h2>
+    <ol>
+    <!-- pop() Define.............................................       -->
+    <li>pop()</li>
+      <h2>Syntax: Array.pop()</h2>
+      <h3>Is Method sy Hum End Wali Value ko Remove Kar Sakty Hain.</h3>
+      <pre>
+  const courses = ["Html", "Css", "JavaScript", "Python", "Java", "C++"]
+  console.log(courses); // The Result is "(6) ['Html', 'Css', 'JavaScript', 'Python', 'Java', 'C++']
+  <b>courses.pop() // Remove End "C++" Value</b>
+  <b>courses.pop() // Remove End "Java" Value</b>
+  console.log(courses); // The Result is "(4) ['Html', 'Css', 'JavaScript', 'Python']"
+
+  <Strong>Note!</Strong> Is Method ko Jitni Dafa lagayn gy utni Value Remove Hoti Jayen gi.
+    </pre>
+
+    <!-- push() Define.............................................       -->
+    <li>push()</li>
+      <h2>Syntax: Array.push(item1, item2, ..., itemX)</h2>
+      <h3>Is Method sy Hum Array main New Value add kar Sakty Hain.</h3>
+      <pre>
+  const courses = ["Html", "Css", "JavaScript"]
+  <b>// Before Add Value Result</b>
+  console.log(courses); // The Result is "(3) ['Html', 'Css', 'JavaScript']"
+  courses.push("Python", "Java")
+  <b>// After Add Value Result</b>
+  console.log(courses); // The Result is "(5) ['Html', 'Css', 'JavaScript', <b>'Python', 'Java'</b>]"
+
+  <Strong>Note!</Strong> Is Main Hum aik Value b add Kar Sakty Hain or aik sy Ziaada b add Kar Sakty Hain.
+    </pre>
+
+    <!-- shift() Define.............................................       -->
+    <li>shift()</li>
+      <h2>Syntax: Array.shift()</h2>
+      <h3>Is Method sy Hum Start Wali Value ko Remove Kar Sakty Hain.</h3>
+      <pre>
+  const courses = ["Html", "Css", "JavaScript", "Python", "Java", "C++"]
+  console.log(courses); // The Result is "(6) ['Html', 'Css', 'JavaScript', 'Python', 'Java', 'C++']
+ <b> courses.shift() // Remove Start "Html" Value
+  courses.shift() // Remove Start "Css" Value</b>
+  console.log(courses); // The Result is "(4) ['JavaScript', 'Python', 'Java', 'C++']"
+
+  <Strong>Note!</Strong> Is Method ko Jitni Dafa lagayn gy utni Value Remove Hoti Jayen gi.
+    </pre>
+
+    <!-- unshift() Define.............................................       -->
+    <li>unshift()</li>
+      <h2>Syntax: Array.unshift(item1, item2, ..., itemX)</h2>
+      <h3>
+        Is Method sy Hum Start Wali Value ko Return Kar Sakty hain jo Remove Hoi
+        Thi.
+      </h3>
+      <pre>
+  const courses = ["Html", "Css", "JavaScript", "Python", "Java", "C++"]
+  console.log(courses); // The Result is "(6) ['Html', 'Css', 'JavaScript', 'Python', 'Java', 'C++']
+ <b> courses.unshift() // Return Value Jo Remove Hoi thi mean "Css"
+  courses.unshift() // Return Value Jo Remove Hoi thi mean "Html"</b>
+  console.log(courses); // The Result is "(4) ['JavaScript', 'Python', 'Java', 'C++']"
+    </pre>
+
+      <h3>
+        Jitni Value Remove Hoi thi un ko Return Karny Ky Baad. Is Method (
+        unshift() ) ko Phir Lagayen gy tu <br />Ik New Value Add Ho Jye Gi.
+      </h3>
+      <pre>
+  const courses = ["Html", "Css", "JavaScript", "Python", "Java", "C++"]
+  console.log(courses); // The Result is "(6) ['Html', 'Css', 'JavaScript', 'Python', 'Java', 'C++']"
+  <b>courses.unshift("React") // New Value Add "React"</b>
+  console.log(courses); <b>// The Result is "(7) ['React', 'Html', 'Css', 'JavaScript', 'Python', 'Java', 'C++']"</b>
+
+  <strong>Note!</strong> Remove Value ko Return Karny Ky Baad Jitni Dafa Is Method <b>"shift()"</b> ko Lagayn Gy New Value Add Hoti Jye Gi.
+      </pre>
+
+    <!-- concat() Define.............................................       -->
+    <li>concat()</li>
+      <h2>Syntax: Array1.concat(array2, array3, ..., arrayX)</h2>
+      <h3>In This We Can Combine Different Arrays Into a Single Array</h3>
+      <pre>
+  const fruitsItems = ["Apple", "Banana", "Peach", "Dates"]
+  const vegetablesItems = ["Ginger", "Garlic", "Potato", "Tomato"]
+  <b>const mixArray = fruitsItems.concat(vegetablesItems)</b>
+  console.log(mixArray);
+  <b>// The Result is "(8) ['Apple', 'Banana', 'Peach', 'Dates', 'Ginger', 'Garlic', 'Potato', 'Tomato']</b>
+
+  <strong>Note!</strong> Is Main Hum Different Arrays Ko Ik hi Array Main Jamam Kar Sakty Hain.
+      </pre>
+
+    <!-- indexOf() Define.............................................       -->
+    <li>indexOf()</li>
+      <h2>Syntax: Array.indexOf(item, start)</h2>
+      <h3>In this we Find the Index of Values.</h3>
+      <pre>
+  const fruitsItems = ["Apple", "Banana", "Peach", "Dates", "Mango"]
+  <b>const indexOf = fruitsItems.indexOf("Dates")</b>
+  console.log(fruitsItems);
+  console.log(indexOf); <b>// This Fruit Item "Dates" IndexOf "3"</b>
+
+  <strong>Note!</strong> Is Main Hum Array ki Kisi b Value Ka Index Pata Karty Hain.
+      </pre>
+
+    <!-- includes() Define.............................................       -->
+    <li>includes()</li>
+      <h2>Syntax: Array.includes(element, start)</h2>
+      <h3>
+        In this we can Check if this Value is Included in the Array or Not.
+      </h3>
+      <pre>
+  const fruitsItems = ["Apple", "Banana", "Peach", "Dates", "Mango"]
+  <b>const includesTrue = fruitsItems.includes("Peach")</b>
+  console.log(includesTrue); <b>// The Result is "True"</b>
+  <b>const includesFalse = fruitsItems.includes("Lemon")</b>
+  console.log(includesFalse); <b>// The Result is "False"</b>
+
+  <strong>Note!</strong> Is Main Hum yeh Pata Laga Sakty hain Ky Yeh Value Array Main Include Hai yan Nai.
+  <strong>Note!</strong> Is Condition Main Hum yeh Pata laga Sakty hain Ky is Array main jo b hum search karyn wo include hai yan nai. 
+  or is ka result "True" usi zoorat main mily ga jesa us main store kia ho ga. or ager kuch b galat type
+  kia tu result "False" aye ga.
+      </pre>
+
+    <!-- reverse() Define.............................................       -->
+    <li>reverse()</li>
+      <h2>Syntax: Array.reverse()</h2>
+      <h3>Reverse Values After Make a Array.</h3>
+      <pre>
+  const fruitsItems = ["Apple", "Banana", "Peach", "Dates", "Mango"]
+  <b>const reverse = fruitsItems.reverse()</b>
+  console.log(fruitsItems);
+  <b>console.log(reverse); // The Result is "(5) ['Mango', 'Dates', 'Peach', 'Banana', 'Apple']"</b>
+
+  <strong>Note!</strong> Is Main Hum Array ki Values ko Reverse Kar Sakty Hain.
+      </pre>
+
+    <!-- sort() Define.............................................       -->
+    <li>sort()</li>
+      <h2>Syntax: Array.sort(compareFunction)</h2>
+      <h3>In This We Can Sort the Values Alphabetically.</h3>
+      <pre>
+  const alphabets = ["G", "K", "I", "C", "J", "A", "E", "B", "F", "H", "D"]
+  <b>const sortWords = alphabets.sort()</b>
+  console.log(alphabets);
+  <b>console.log(sortWords); // The Result is "(11) ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K']" 
+  </b>
+
+  <strong>Note!</strong> Yeh Original Array Ko b Change Kar Dy Ga.
+      </pre>
+
+    <!-- slice() Define.............................................       -->
+    <li>slice()</li>
+      <h2>Syntax: Array.slice(start, end)</h2>
+      <h3>
+        If we have to Select Some Values from an Array, We Can Separate the
+        Values.
+      </h3>
+      <pre>
+  const animalsName = ["Dog", "Cat", "Cow", "Goat", "Camel", "Sheep", "Lion", "Tiger"]
+  console.log(animalsName);
+  <b>const sliceValue = animalsName.slice(2, 6)</b>
+  console.log(sliceValue); <b>// The Result is "(4) ['Cow', 'Goat', 'Camel', 'Sheep']"</b>
+
+  <strong>Note!</strong> Is sy Hum yeh Kar Sakty hain Ky Ager Hamy Array Main Sy Kuch Values Select Karni Hon Tu Hum Values ko <br>    Separate Kar Sakty Hain.
+      </pre>
+
+    <!-- splice() Define.............................................       -->
+    <li>splice()</li>
+      <h2>Syntax: Array.splice( index, remove_count, .....item_list )</h2>
+      <h3>
+        If we have to Select Some Values from an Array, We Can Separate the
+        Values. <br />
+        But it also Changes the Original Array, Meaning it Excludes Separate
+        Values.
+      </h3>
+      <h3>
+        JavaScript Array splice() Method is an inbuilt method in JavaScript that
+        is used to change the contents of an array by removing or replacing
+        existing elements and/or adding new elements. It modifies the original
+        array and returns an array of the removed elements.
+      </h3>
+      <pre>
+  const animalsName = ["Dog", "Cat", "Lion", "Tiger", "Cow", "Goat", "Camel", "Sheep"]
+  console.log(animalsName); // The Result is "(8) ['Dog', 'Cat', 'Lion', 'Tiger', 'Cow', 'Goat', 'Camel', 'Sheep']"
+  <b>const spliceValue = animalsName.splice(4)</b>
+  console.log(spliceValue); <b>// The Result is "(4) ['Cow', 'Goat', 'Camel', 'Sheep']"</b>
+  console.log(animalsName); <b>// The Result is "(4) ['Dog', 'Cat', 'Lion', 'Tiger']"</b>
+
+  <strong>Note!</strong> Is Main Hum Different Arrays Ko Ik hi Array Main Jamam Kar Sakty Hain.
+      </pre>
+
+      <h3>Remove Value for ( splice() Method help )</h3>
+      <pre>
+  const fruitItems = ["Apple", "Banana", "Kiwi", "Mango", "Grape"];
+  console.log(fruitItems);
+  <b>const deleteItem = fruitItems.splice(2, 1)</b> 
+  console.log(deleteItem); <b>// The <mark>"Kiwi"</mark> Item Removed</b>
+  console.log(fruitItems); <b>// The Result is "(4) ['Apple', 'Banana', 'Mango', 'Grape']"  </b>
+      </pre>
+
+      <h3>Replace Value for ( splice() Method help )</h3>
+      <pre>
+  const fruitItems = ["Banana", "Kiwi", "Mango", "Grape"];
+  console.log(fruitItems);
+  <b>const replaceItem = fruitItems.splice(1, 1, "Papaya")</b> 
+  console.log(replaceItem); <b>// Replaced Value <mark>"Kiwi"</mark> to <mark>"Papaya"</mark></b>
+  console.log(fruitItems); <b>// The Result is "(4) ['Banana', <mark>'Papaya'</mark>, 'Mango', 'Grape']"</b>
+      </pre>
+
+      <h3>New Add Multiple Values for ( splice() Method help )</h3>
+      <pre>
+  const fruitItems = ["Apple", "Banana", "Grape"];
+  console.log(fruitItems);
+  <b>const addItem = fruitItems.splice(2, 0, "Papaya", "Water Melon")</b> 
+  console.log(addItem); <b>// Added Two New Values <mark>"Papaya"</mark> and <mark>"Water Melon"</mark></b>
+  console.log(fruitItems); <b>// The Result is "(5) ['Apple', 'Banana', <mark>'Papaya'</mark>, <mark>'Water Melon'</mark>, 'Grape']"</b>
+      </pre>
+    </ol>
+    <hr />
+
+    <h1>Multidimensional Arrays in JavaScript</h1>
+    <h2>Multidimensional Arrays are also Called as Arrays inside Array.</h2>
+
+    <!-- Syntax Of Arrays.............................................       -->
+    <h2>Syntax Of Multidimensional Arrays</h2>
+    <pre>
+   const arrayName = [[Array1], [Array2], [Array3], .....]
+ </pre
+    >
+    <h2>Some Examples of Multidimensional Arrays</h2>
+    <h3>Users Salary Example</h3>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+      
+      const salary = [
+        ["Ali", 500000],
+        ["Bilal", 200000],
+        ["Abdul Rehman", 100000]
+      ];
+      console.log(salary); <b>// The Result is "(3) [Array(2), Array(2), Array(2)]"</b>
+    </pre>
+
+    <h3>Kisi Array yan us ki Value ko is Tarah Access karayn gy.</h3>
+    <pre>
+      const salary = [
+        ["Ali", 500000],
+        ["Bilal", 200000],
+        ["Abdul Rehman", 100000]
+      ];
+      const selectArray = <b><mark>[salary[1][0]]</mark></b> <b>// The Result is "Bilal"</b>
+      console.log(selectArray);
+
+      <strong>Note!</strong> Ager hum ik dafa asy <b><mark>"[1]"</mark></b> check karyn gy tu array ka index show ho ga or ager 2sri dafa type karyn gy tu array ky <br>      ander value ka index show ho ga. 
+    </pre>
+
+    <h3>Tic Tac Toe Game Example</h3>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const ticTacToe = [
+        ["X", null, null],
+        [null, null, "O"],
+        ["O", null, "X"]
+      ]  
+    </pre>
+
+<!-- Shallow Copy ........................................................................ -->
+    <h2>Shallow Copy</h2>
+    <pre>
+      const fruits = ["Apple", "Banana", "Peach", "Mango"];
+      const myFruits = []
+      <b><mark>Object.assign(myFruits, fruits)</mark></b> <b>// is Tarah use "ES6" sy pehly kia jata tha.</b>
+      // const myFruits = <b><mark>[...fruits]</mark></b> ; <b>// The Spread Operator use in "ES6"</b>
+      console.log(myFruits);
+    </pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>

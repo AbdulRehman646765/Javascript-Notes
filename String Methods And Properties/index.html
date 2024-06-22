@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods And Properties</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="main-title">String Methods And Properties in javaScript</h1>
+
+    <h1>String Methods And Properties</h1>
+    <h3>
+      Before starting string methods and properties we need know that strings
+      are indexed. So basically we can access any single character of a string
+      by doing something like this.
+    </h3>
+
+    <h2>Property</h2>
+    <h3>There is only one property that exists.</h3>
+    <ul>
+      <li><code>length</code></li>
+    </ul>
+    <h2>Length Property</h2>
+    <h3>Is Property sy Hum Kisi b Value Ki Length Check Kar Sakty Hain.</h3>
+    <pre>
+        <strong>Example:</strong> Below is examples.
+        
+        const username = "Abdul Rehman";
+        <b>const nameLengthDefine = username<mark>.length</mark></b>
+        console.log(nameLengthDefine); <b>// This Value Length is "12"</b>
+              
+        const userEmail = "abdulofficial187@gmail.com";
+        <b>const emailLengthDefine = userEmail<mark>.length</mark></b>
+        console.log(emailLengthDefine);<b>// This Value Length is "26"</b>
+              
+        const userAddress = "H# 3C/5, StarColony, Bhimbher Rode, Gujrat";
+        <b>const addressLengthDefine = userAddress<mark>.length</mark></b>
+        console.log(addressLengthDefine); <b>// This Value Length is "42"</b>
+       </pre
+    >
+    <hr>
+
+    <h2>Methods (Without Argument)</h2>
+    <ul>
+      <li><code>toUpperCase() </code></li>
+      <h3>Is Method sy Hum Kisi b Value Ko Uppercase Kar Sakty Hain.</h3>
+      <pre>
+        const username = "Abdul Rehman";
+        <b>const nameUpperCase = username<mark>.toUpperCase()</mark></b>
+        console.log(nameUpperCase); <b>// The Result is "ABDUL REHMAN"</b>
+      </pre>
+
+      <li><code>toLowerCase()</code></li>
+      <h3>Is Method sy Hum Kisi b Value Ko Lowercase Kar Sakty Hain.</h3>
+      <pre>
+        const username = "Abdul Rehman";
+        <b>const nameLowerCase = username<mark>.toLowerCase()</mark></b>
+        console.log(nameLowerCase); <b>// The Result is "abdul rehman"</b>
+      </pre>
+
+      <li><code>trim()</code></li>
+      <h3>Is Method sy Hum Kisi b Value Sy White Space Ko Remove Kar Sakty Hain.</h3>
+      <pre>
+        const username = "<mark>   </mark>Abdul Rehman<mark>   </mark>";
+        <b>const nameTrim = username<mark>.trim()</mark></b>
+        console.log(nameTrim); <b>// The Result is "   Abdul Rehman   " to "Abdul Rehman"</b>
+      </pre>
+
+      <li><code>trimStart()</code></li>
+      <h3>Is Method sy Hum Kisi b Value Ky Start Sy White Space Ko Remove Kar Sakty Hain.</h3>
+      <pre>
+        const username = "<mark>   </mark>Abdul Rehman";
+        <b>const nameTrimStart = username<mark>.trimStart()</mark></b>
+        console.log(nameTrimStart); <b>// The Result is "   Abdul Rehman" to "Abdul Rehman"</b>
+      </pre>
+
+      <li><code>trimEnd()</code></li>
+      <h3>Is Method sy Hum Kisi b Value Ky End Sy White Space Ko Remove Kar Sakty Hain.</h3>
+      <pre>
+        const username = "Abdul Rehman<mark>   </mark>";
+        <b>const nameTrimEnd = username<mark>.trimEnd()</mark></b>
+        console.log(nameTrimEnd); <b>// The Result is "Abdul Rehman    " to "Abdul Rehman"</b>
+      </pre>
+    </ul>
+
+
+    <h2>Methods (With Argument)</h2>
+    <ul>
+      <!-- includes() Define............................... -->
+      <li><code>includes()</code></li>
+      <h3>In this we can Check if this Value is Included in the String or Not.</h3>
+      <pre>
+        const username = "My Name is Abdul Rehman.";
+        <b>const includeNameTrue = username<mark>.includes("Abdul Rehman")</mark></b> 
+        console.log(includeNameTrue); <b>// The Result is True</b>
+        <b>const includeNameFalse = username<mark>.includes("Abdur Rehman")</mark></b> 
+        console.log(includeNameFalse); <b>// The Result is False</b>
+
+      <code><strong>Note!</strong> is condition main hum yeh pata laga sakty hain ky is string main jo b hum search karyn wo include hai yan nai. 
+          or is ka result "True" usi zoorat main mily ga jesa us main store kia ho ga. or ager kuch b galat type
+           kia tu result "False" aye ga.</code>
+      </pre> 
+
+      <!-- indexOf() Define................................. -->
+      <li><code>indexOf()</code></li>
+      <h3>In this we Find the Index of Values.</h3>
+      <pre>
+        const username = "Hello"; <b>// is main 5 char hain or is ko count is tarah karyn gy (0,1,2,3,4)</b>
+        <b>const indexOfName = username.indexOf("e");</b> 
+        console.log(indexOfName); <b>// The Result is "1"</b>
+
+      <code><strong>Note!</strong> wesy tu <b><mark>"e"</mark></b> 2sry number par hai or javaScript main choonky <b><mark>"0"</mark></b> sy count kia jata hai is lye yeh <b><mark>"1"</mark></b> number par hai.</code>
+      </pre>
+
+      <!-- replace() Define................................. -->
+      <li><code>replace()</code></li>
+      <h3>In this we can Replace one Value with another Value.</h3>
+      <pre>
+        const username = "0341 1264622"
+        <b>const replaceName = username<mark>.replace("0341 1264622", "0340 3148438")</mark></b>
+        console.log(replaceName); <b>// The Result is "0340 3148438"</b>
+
+      <code><strong>Note!</strong> is ka result tu yeh ana chahye tha <b>"0341 1264622"</b> par is ka result yeh <b>"0340 3148438"</b> is lye aya kio ky 
+            hum ny <b>"relpace()"</b> method use kia.</code>
+      </pre>
+
+      <!-- replaceAll() Define................................. -->
+      <li><code>replaceAll()</code></li>
+      <pre>
+        let text = "I love Dogs. Dogs are very easy to love. Dogs is a Beautiful Animal."
+        <b>text = text<mark>.replaceAll("Dogs", "Cats")</mark></b>
+        console.log(text); <b>// The Result is "I love Cats. Cats are very easy to love. Cats is a Beautiful Animal."</b>
+
+      <code><strong>Note!</strong> is main hum ny <b>"Dogs"</b> ko <b>"Cats"</b> sy <b>"replace"</b> kar dya. is method <b>"replaceAll()"</b> ki help sy. </code>
+      </pre>
+
+      <!-- concat() Define................................. -->
+      <li><code>concat()</code></li>
+      <h3>In This We Can Combine Different Strings Into a Single String.</h3>
+      <pre>
+        const username = "My Name is "
+        const firstName = "Abdul"
+        const LastName = "Rehman"
+        const fatherName = "Muhammad Mehdi"
+        <b>const mixString = username<mark>.concat(firstName, " " , LastName, "." , " My Father Name is ", fatherName, ".")</mark>;</b>
+        console.log(mixString); <b>// The Result is "My Name is Abdul Rehman. My Father Name is Muhammad Mehdi."</b>
+
+      <code><strong>Note!</strong> is main hum different strings ko ik hi string main ekhatha kar sakty hain.</code>
+      </pre>
+
+      <!-- padStart() Define................................. -->
+      <li><code>padStart()</code></li>
+      <pre>
+        const accountNumber = 8643
+        <b>const hideAccount = "8643"<mark>.padStart(16, "*")</mark></b>
+        console.log(hideAccount); <b>// The Result is "************8643"</b>
+
+      <code><strong>Note!</strong> is main hum apny account number ko <b>Hide</b> kar sakty hain. ager number ko <b>Start</b> sy hide karna ho tu is method sy <b>"padStart()"</b>
+          ki help sy kar sakty hain.</code>
+      </pre>
+
+      <!-- padEnd() Define................................. -->
+      <li><code>padEnd()</code></li>
+      <pre>
+        const accountNumber = 8643
+        <b>const hideAccount = "8643"<mark>.padEnd(16, "*")</mark></b>
+        console.log(hideAccount); <b>// The Result is "8643************"</b>
+
+      <code><strong>Note!</strong> is main hum apny account number ko <b>Hide</b> kar sakty hain. or ager number ko <b>End</b> sy hide karna ho tu is method sy <b>"padEnd()"</b>
+          ki help sy kar sakty hain.</code>
+
+      </pre>
+
+      <!-- charAt() Define................................. -->
+      <li><code>charAt()</code></li>
+      <pre>
+      <strong>Note!</strong> yeh method <mark>"indexOf()"</mark> ka opposite hai
+
+        const text1 = "Hello";
+        <b>const defineCharText1 = text1<mark>.charAt(1)</mark></b>
+        console.log(defineCharText1); <b>// The Result is "e"</b>
+        
+        const text2 = "Hello";
+        <b>const defineCharText2 = text2<mark>[0]</mark></b> 
+        console.log(defineCharText2); <b>// The result is "H"</b>
+
+      <code><strong>Note!</strong> is ko hum <b>Uper</b> dye howy 2no way <b><mark>"[]"</mark> or <mark>"charAt()"</mark></b> sy <b>Define</b> kar sakty hain.</code>
+      </pre>
+
+      <!-- charCodeAt() Define................................. -->
+      <li><code>charCodeAt()</code></li>
+      <pre>
+        const text = "Hello"
+        <b>const defineCharCode = text<mark>.charCodeAt(0)</mark></b>
+        console.log(defineCharCode); <b>// The Result is "72"</b>
+
+      <code><strong>Note!</strong> is main hum kisi b <mark><b>Character</b> ka <b>Code</b></mark> define kar sakty hain. choonky har character apna ik code rakhta hai.</code>
+      </pre>
+
+      <!-- split() Define................................. -->
+      <li><code>split()</code></li>
+      <pre>
+        const username = "My Name is Abdul Rehman";
+        <b>const splitName = username<mark>.split(" ")</mark></b>;
+        console.log(splitName); <b>// The result is "['My', 'Name', 'is', 'Abdul', 'Rehman']" </b>
+
+      <code><strong>Note!</strong> is main hum ik bari string ko is method <b><mark>"split()"</mark></b> ki help sy chooti <b><mark>strings</mark></b> main <b><mark>Divide</mark></b> karty hain.</code>
+      </pre>
+    </ul>
+
+<!-- 
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+    </table> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

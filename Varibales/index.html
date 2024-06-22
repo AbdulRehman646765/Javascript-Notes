@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Variables in javaScript</h1>
+
+    <h1>JavaScript Variables</h1>
+    <h2>Variables are Containers for Storing Data</h2>
+    <h3>JavaScript Variables can be declared in 4 ways:</h3>
+
+    <ol>
+      <li>Automatically</li>
+      <li>Var</li>
+      <li>Let</li>
+      <li>Const</li>
+    </ol>
+    <hr />
+
+    <h2>Rules for Naming Variables.</h2>
+    <p>
+      A variable name can contain any of the following charaters but must not
+      start with a digit.
+    </p>
+    <ul>
+      <li>Capital Letters: <span>A to Z</span></li>
+      <li>Small Letters: <span>a to z</span></li>
+      <li>
+        Digits:
+        <span>0 to 9 (but we can't start variable name with digits)</span>
+      </li>
+      <li>
+        Only two special charatars that are:
+        <span>Dollor "$" and Underscore "_"</span>
+      </li>
+    </ul>
+    <hr />
+    <h2>When to Use var, let, or const?</h2>
+
+    <ol>
+      <li>Always declare variable.</li>
+      <li>Always use const if the value should not be changed.</li>
+      <li>
+        Always use const if the type should not be changed. (Arrays and Objects)
+      </li>
+      <li>Only use let if you can't use const.</li>
+      <li>Only use var if you MUST support old browsers.</li>
+    </ol>
+    <hr />
+    <h2>Syntax Of Variables</h2>
+    <pre>
+    const x = 5;
+    const y = 6;
+    const z = x+y;
+    console.log (z); // Result is 11
+  </pre
+    >
+    <hr />
+    <h2>Some Examples Of Variables</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      const username = "Abdul Rehman";
+      const userAge = 23;
+      const fatherName = "Muhammad Mehdi";
+      const skill1 = "Web Designer";
+      const skill2 = "Web Developer";
+
+      console.log("My Name is" + " " + username + ". I am " + userAge + " Years Old." + " My Father Name is " + fatherName +
+       ". I am a passionate " + skill1 + " And " + skill2 + ".");
+    </pre>
+    <strong>Output</strong>
+    <pre>
+      <b>My Name is Abdul Rehman. I am 23 Years Old. My Father Name is Muhammad Mehdi. I am a passionate Web Designer And
+        Web Developer.</b>
+    </pre>
+    <hr />
+
+    <h1>Variables Address</h1>
+    <pre>
+        const firstName = "Abdul"; // The Address is "@457317"
+        const lastName = "Rehman"; // The Address is "@457315"
+        const userAge = 15; // The Address is "@479813"
+        const isGraduate = false; // The Address is "@77"
+    </pre>
+    <hr />
+
+    <h1>Dialog Box Create</h1>
+    <h2>3 Way Dialog Box Create</h2>
+
+    <ol>
+      <li>alert ()</li>
+      <li>confirm ()</li>
+      <li>prompt ()</li>
+    </ol>
+
+    <h2>How To Create Dialog Box</h2>
+    <pre>
+  <h3>Alert Box Create.</h3>
+      alert("Please Press OK Button");
+
+  <h3>Confirm Box Create.</h3>
+      const isConfirm = confirm("Would you like to proceed?");
+      console.log(isConfirm);
+      
+  <h3>Prompt Box Create.</h3>
+      const userInput = prompt("Please Enter Your Name.");
+      console.log(userInput);
+ </pre>
+    <hr />
+
+    <h1>Convert String to Number</h1>
+    <h3>Some Examples</h3>
+    <pre>
+  let user2Age = "23"
+
+  user2Age = Number(user2Age); // Convert "23" to 23
+  user2Age = parseInt(user2Age); // Convert "23" to 23
+  user2Age = parseFloat(user2Age); // Convert "23" to 23
+  console.log(user2Age, typeof user2Age);
+</pre
+    >
+    <hr />
+
+    <h1>Rectangle Area Define</h1>
+    <h3>Example</h3>
+    <pre>
+  const width = +prompt("Please Enter your Rectangle Width.")
+  const height = +prompt("Please Enter your Rectangle Height.")
+  console.log(width*height);
+</pre
+    >
+    <script src="variables.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Jost:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap');
+
+/* font-family: "Bangers", system-ui; */
+/* font-family: "Jost", sans-serif; */
+/* font-family: "Courgette", cursive; */
+/* font-family: "Protest Riot", sans-serif; */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    border: 2px solid black;
+}
+
+.main-title{
+    font-size: 45px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Jost", sans-serif;
+}
+
+ol li, li code{
+    font-size: 23px;
+    line-height: 40px;
+    font-family: "Protest Riot", sans-serif;
+}
+
+pre{
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.line_height{
+    line-height: 25px;
+}
+
+.size_increase{
+    font-size: 20px;
+    font-family: "Jost", sans-serif;
+}
+
+.height_decrease li{
+    font-size: 17px;
+    /* line-height: 5px; */
+    margin-top: 10px;
+}
+
+.object_code{
+    font-size: 17px;
+    line-height: 25px;
+}
+
+strong{
+    font-size: 20px;
+}
+
+.object_para{
+    font-size: 24px;
+    font-family: "Jost", sans-serif;
+}

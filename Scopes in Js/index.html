@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scopes in JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">Scopes in JavaScript</h1>
+    <!-- Global Scope Vs Local Scope............................................................ -->
+    <h1>Global Scope Vs Local Scope</h1>
+    <h2>Global Scope</h2>
+    <code
+      ><strong>Note!</strong> Ager kisi Variable ko
+      <b><mark>"Let"</mark></b> yan <b><mark>"Const"</mark></b> sy define Karyn
+      gy tu wo <b><mark>"Script Scope"</mark></b> main store ho ga. Or ager
+      <b><mark>"Var"</mark></b> sy define Karyn gy tu wo
+      <b><mark>"Window Object"</mark></b> main store ho ga.</code
+    >
+    <br />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Ager hum kisi Variable ko
+      <b><mark>"Function"</mark></b> ky bahir Define karyn tu usy Function ky
+      ander b <b><mark>"Console"</mark></b> Karwa Sakty hain. But ager
+      <b><mark>"Variable"</mark></b> ko Function ky ander Define Karyn tu usy
+      Function ky ander hi <b><mark>"Console"</mark></b> Karwa Sakty hain.
+      Function ky bahir <b><mark>"Console"</mark></b> nai Karwa Sakty.</code
+    >
+    <br />
+    <br />
+
+    <code
+      ><strong>Question:</strong>
+      <b>Global Scope ky ander <mark>"Script"</mark> kab aye ga?</b> <br />
+      <strong>Answer:</strong> Global Scope ky ander
+      <b><mark>"Script"</mark></b> usi time aye ga jab hum
+      <b><mark>"Let"</mark></b> yan <b><mark>"Const"</mark></b> sy
+      <b>"Variable"</b> define Karyn gy.</code
+    >
+    <br />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Global Scope ky ander
+      <b><mark>2 Categories</mark></b> hoti hain. in dono ky ander jo b
+      <b><mark>"Variable"</mark></b> hoon gy unhyn hum apny
+      <b><mark>"Program"</mark></b> main kahi b <b><mark>"Use"</mark></b> kar
+      Sakty hain.
+      <ol>
+        <li>Script Scope</li>
+        <li>Window Object</li>
+      </ol>
+      <strong>Question:</strong>
+      <b>In dono main kia <mark>difference</mark> hota hai?</b> <br />
+      <strong>Answer:</strong> In main difference yeh hai ky jo b
+      <b><mark>"Variable"</mark></b> <b><mark>"Let"</mark></b> yan
+      <b><mark>"Const"</mark></b> sy define Karty hain wo
+      <b><mark>"Script Scope"</mark></b> main store hoty hain. Or jo
+      <b><mark>"Var"</mark></b> sy define Karyn gy wo
+      <b><mark>"Window Object"</mark></b> main store ho ga.
+    </code>
+    <br />
+    <br />
+
+    <code
+      ><strong>Note!</strong> <b><mark>"Let"</mark></b> or
+      <b><mark>"Const"</mark></b> sy jo <b><mark>"Variable"</mark></b> define
+      Karyn gy or jab tak un main <b><mark>"Undefined"</mark></b> hota hai tu wo
+      <b><mark>"Temporal Dead Zone (TDZ)"</mark></b> main hoty hain.</code
+    >
+    <br />
+    <br />
+
+    <code
+      ><strong>Note!</strong> <b><mark>"Window Object"</mark></b> main jo b ho
+      ga usy hum <b><mark>"Window."</mark></b> sy access kar Sakty hain.
+      <b><mark>"Otherwise"</mark></b> access nai kar Sakty.</code
+    >
+    <br />
+    <br />
+    <h2>Local Scope</h2>
+    <code
+      ><strong>Note!</strong> Jab hum kisi <b><mark>"Function"</mark></b> ko
+      <b><mark>"Call"</mark></b> karty hain tu us ka alg sy ik
+      <b><mark>"Scope"</mark></b> Create hota hai. Or us ka Name
+      <b><mark>"Local Scope"</mark></b> hota hai. Or is ky Start main
+      <b><mark>"This Object"</mark></b> Create ho ga Phir baqi
+      <b><mark>"Variables"</mark></b> wagera. Or jesy hi Function
+      <b><mark>"End"</mark></b> ho ga <b><mark>"Local Scope"</mark></b> b
+      <b><mark>"Delete"</mark></b> ho jye ga. Or us ky ander sy sab
+      <b><mark>"Variables"</mark></b> b <b><mark>"Delete"</mark></b> ho jaty
+      hain. Isi lye Function ky ander Variables ko hum Function ky bahir
+      <b><mark>access</mark></b> hai kar Sakty. Kio ky wo sab
+      <b><mark>Delete</mark></b> ho jaty hain.</code
+    >
+    <br />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Ager hum Function ky ander koi
+      <b><mark>"Variable"</mark></b> define karyn Same name ky sath jo hum ny
+      pehly b define kia ho. Tu ager hum us <b><mark>"Variable"</mark></b> ko
+      access karyn gy. Tu access wahi ho ga jo <b><mark>"Function"</mark></b> ky
+      ander ho ga. Kio ky yeh apny <b><mark>Closest</mark></b> ko access karta
+      hai or is ky close main Function wala Variable hi hai.</code
+    >
+    <br />
+    <br />
+    <hr />
+
+    <!-- Lexical Scope and Block Scope............................................................ -->
+    <h1>Lexical Scope and Block Scope</h1>
+    <h2>Lexical Scope</h2>
+    <code
+      ><strong>Question:</strong> <b>Lexical Scope kesy kehty hain?</b> <br />
+      <strong>Answer:</strong> Lexical Scope yeh hota hai ky
+      <b><mark>Inner Function</mark></b> ka Scope. Phir us ky
+      <b><mark>Outer Function</mark></b> ka Scope. Phir us ky Outer ka Scope isi
+      tarah <b><mark>Global Scope</mark></b> tak. Yeh jitny b Scope hain in ko
+      <b><mark>Lexical Scope</mark></b> kehty hain.
+    </code>
+    <br /><br />
+    <code
+      ><strong>Note!</strong> Ager ap pury ka pura
+      <b><mark>Function</mark></b> hi <b><mark>Return</mark></b> kar daty hoon
+      tu sirf <b><mark>Function</mark></b> hi <b><mark>return</mark></b> nai
+      hota, us ka pura <b><mark>Scope</mark></b> <b><mark>return</mark></b> hota
+      hai. Or sirf <b><mark>Scope</mark></b> hi nai wo pura us ka
+      <b><mark>Lexical Scope</mark></b> <b><mark>return</mark></b> hota
+      hai.</code
+    > <br>
+    <br>
+    <code>
+      <strong>Note!</strong> Outer function ky ander jitny b inner function hon
+      un sab ko outer function ka <b><mark>access</mark></b> hota hai. <br />
+      <strong>Example:</strong> <br />
+      <br />
+      <pre>
+        function <b>outer()</b>{
+          let username = "Abdul Rehman";
+          console.log(secret); <b>// yeh variable (secret) inner function main define kia gya hai. is ko hum outer ky ander access 
+                                  nai kar sakty. kio ky hum outer function ky ander inner function ko access nai kar sakty.</b>
+          function <b>innerOne()</b>{
+              let secret = my123; <b>// is variable ka access sirf isi inner function ky pass hai. Na hi outer function ky pass hai 
+                                     or na hi kisi dosry inner function ky pass hai. jo ky hamary is code main dosray 
+                                     inner functions (innerTwo and innerThree) hain.</b>
+              console.log("innerOne", username);
+          }
+          function <b>innerTwo()</b>{
+              console.log("innerTwo", username);
+              console.log(secret); <b>// yeh b access nai ho ga. kio ky inner inner apas main b access nai hoty</b>
+          }
+          function <b>innerThree()</b>{
+              console.log("innerThree", username);
+          }
+          innerOne() <b>// innerOne Abdul Rehman</b>
+          innerTwo() <b>// innerTwo Abdul Rehman</b>
+          innerThree() <b>// innerThree Abdul Rehman</b>
+      }
+      outer()
+      console.log("too outer",username); <b> // isy b hum outer ky ander hi access kar sakty hain. outer ka bahir nai.</b>
+      
+      </pre>
+    </code>
+    <br /><br />
+
+    <h2>Block Scope</h2>
+    <code
+      ><strong>Question:</strong> <b>Block Scope kesy kehty hain?</b> <br />
+      <strong>Answer:</strong> Block Scope yeh hota hai ky sirf
+      <b><mark>Curly Bracket "{}"</mark></b> ka ander jo b code likha jye usy
+      <b><mark>Block Scope</mark></b> Kehty hain.</code
+    >
+    <br />
+    <br />
+
+    <code
+      ><strong>Note!</strong> Block Scope ky ander jo b
+      <b><mark>"Let"</mark></b> or <b><mark>"Const"</mark></b> sy
+      <b><mark>"Variable"</mark></b> define Karyn gy wo isi
+      <b><mark> Block Scope</mark></b> main access ho ga is ky bahir nai ho ga.
+      <b>But</b> <b><mark>"Var"</mark></b> sy jo
+      <b><mark>"Variable"</mark></b> define Karyn gy wo Block Scope ky bahir b
+      access ho ga.</code
+    >
+    <br />
+    <br />
+    <hr />
+
+    <!-- Closures Scope ------------------------------------------------------------------------- -->
+    <h1>Closures Scope</h1>
+    <code
+      ><strong>Note!</strong> Ager hum <b><mark>Inner Function</mark></b> ky
+      ander <b><mark>Outer Function</mark></b> ky
+      <b><mark>Variables</mark></b> ko use karty hain tu wo
+      <b><mark>Inner Function</mark></b> aik
+      <b><mark>Closure Scope</mark></b> bana leta hai.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Ager ap pury ka pura
+      <b><mark>Function</mark></b> hi <b><mark>Return</mark></b> kar daty hoon
+      tu sirf <b><mark>Function</mark></b> hi <b><mark>return</mark></b> nai
+      hota, us ka pura <b><mark>Scope</mark></b> <b><mark>return</mark></b> hota
+      hai. Or sirf <b><mark>Scope</mark></b> hi nai wo pura us ka
+      <b><mark>Lexical Scope</mark></b> <b><mark>return</mark></b> hota
+      hai.</code
+    >
+    <br />
+    <br />
+    <h2>Function Memory Creation</h2>
+    <code
+      ><strong>Note!</strong> <b><mark>Function</mark></b> ko jitni dafa
+      <b><mark>Call</mark></b> karyn gy. Har dafa aik
+      <b><mark>New Memory</mark></b> create ho gi.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Jab <b><mark>Function</mark></b> ko
+      <b><mark>Call</mark></b> karty hain tu wo apni aik
+      <b><mark>Memory</mark></b> create karta hai. Or phir jab hum
+      <b><mark>variables</mark></b> ko <b><mark>Console.log</mark></b> karyn gay
+      tu <b><mark>Function</mark></b> <b><mark>delete</mark></b> ho jye ga. or
+      Variables b <b><mark>delete</mark></b> ho jyen gy. Isi tarah jab hum
+      <b><mark>Function</mark></b> ko again call karyn gy tu phir isi tarah
+      <b><mark>same</mark></b> ho ga
+      <b><mark>jesy yeh pechy bayan howa.</mark></b> Or har dafa
+      <b><mark>new memory create</mark></b> ho gi.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Jab <b><mark>Function run</mark></b> hota hai tu
+      wo <b><mark>Variables</mark></b> <b><mark>create</mark></b> hoty hain jo
+      <b><mark>Function</mark></b> main <b><mark>define</mark></b> kye hoon. Or
+      jab <b><mark>Function End</mark></b> hota tu
+      <b><mark>Variables</mark></b> b <b><mark>delete</mark></b> ho jaty
+      hain.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Jab koi <b><mark>Child Function</mark></b> us ky
+      kisi <b><mark>Variables</mark></b> ky sath
+      <b><mark>Closure</mark></b> bana leta hai tu wo
+      <b><mark>immediately</mark></b> wahan sy <b><mark>delete</mark></b> nai
+      hota. wo wahi par rehta hai. Or jo un ki <b><mark>location</mark></b> ka
+      <b><mark>reference</mark></b> hai wo us
+      <b><mark>Function (Child)</mark></b> ko dy dya jata hai. Or
+      <b><mark>Function end</mark></b> ho gya lekin us ky
+      <b><mark>Variables</mark></b> ko <b><mark>delete</mark></b> nai kia gya.
+      wo <b><mark>Variables</mark></b> jo <b><mark>Child Function</mark></b> use
+      kar raha hai.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Ager hum ny
+      <b><mark>Parent Function</mark></b> main 2
+      <b><mark>Variables</mark></b> define kye farz karyn
+      <b><mark>(a aur b)</mark></b> name sy. Phir hum ny
+      <b><mark>(a)</mark></b> ko <b><mark>Child Function</mark></b> main
+      <b><mark>use</mark></b> kya or <b><mark>(b)</mark></b> ko
+      <b><mark>Parent Function</mark></b> main use kya tu ho ga kuch is tarah ky
+      <b><mark>(a) Variable</mark></b> ki <b><mark>memory create</mark></b> ho
+      gi. Phir us <b><mark>Variable</mark></b> main jo
+      <b><mark>Value</mark></b> define ki hai usy rakhy ga. Phir
+      <b><mark>(b) Variable</mark></b> ki <b><mark>Memory create</mark></b> ho
+      gi. Phir <b><mark>(b)</mark></b> ki <b><mark>value</mark></b> rakhy ga.
+      Phir <b><mark>(b) Variable</mark></b> <b><mark>Console</mark></b> ho jye
+      ga. Phir hum ny jo <b><mark>(a) Variable</mark></b> ko
+      <b><mark>Child Function</mark></b> main use kia hai us ki
+      <b><mark>memory</mark></b> wahan rahy gi. Phir jab hum
+      <b><mark>Child Function</mark></b> ko <b><mark>return</mark></b> karyn gy
+      tu <b><mark>(b)</mark></b> ki value <b><mark>delete</mark></b> ho jye gi
+      lekin <b><mark>(a)</mark></b> ki value wahan rahy gi. wo
+      <b><mark>delete</mark></b> nai ho gi. <b><mark>(a)</mark></b> ki value ka
+      jo <b><mark>reference</mark></b> hai wo
+      <b><mark>Child Function</mark></b> ko dy dya jye ga.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> jo b hum <b><mark>Variable</mark></b> ko
+      <b><mark>Child Function</mark></b> main <b><mark>use</mark></b> karty hain
+      tu <b><mark>Child function (inner function)</mark></b> aik
+      <b><mark>Closure</mark></b> bana leta hai. <b><mark>Closure</mark></b> ka
+      matlb yeh hai ky jab <b><mark>Function end</mark></b> ho jye ga to wo
+      variables <b><mark>delete</mark></b> nai hoon gay wo
+      <b><mark>memory</mark></b> main hi rahayn gay. Or un ka
+      <b><mark>reference</mark></b> jo b un main
+      <b><mark>function</mark></b> tha us ko dy dya jye ga. ager hum us function
+      ko <b><mark>return</mark></b> b kar dety hain tu us ka
+      <b><mark>reference</mark></b> wahan rahy ga wo
+      <b><mark>delete</mark></b> nai ho ga.</code
+    >
+    <br />
+    <br />
+    <code
+      ><strong>Note!</strong> Ager hum <b><mark>Child Function</mark></b> ky
+      around <b><mark>multiple Parents function</mark></b> create karyn or har
+      <b><mark>Parent function</mark></b> main
+      <b><mark>aik variable</mark></b> define karyn. phir hum ager
+      <b><mark>Child Function</mark></b> main un sab
+      <b><mark>variables</mark></b> ko use karyn tu un sab ka alag alag sy
+      <b><mark>Closure scope</mark></b> bany ga</code
+    >
+    <br />
+    <br />
+    <hr>
+    <h1>Create Once Function</h1>
+    <h2>Esa function jo sirf aik hi dafa call ho ga</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+      
+      function createOnceFunction(){
+        let executed = false;
+
+        return function () {
+          if(<b><mark>!executed</mark></b>){ <b>// "!executed" is ka matlb yeh hai ky ager executed variable "false" hai tu usy "true" kar dy ga.</b>  
+            executed = true;
+            console.log("Congratulations! you have called the function.");
+          }
+        }
+      }
+      const z = createOnceFunction()
+      console.dir(z); 
+    </pre>
+    <script src="script.js"></script>
+  </body>
+</html>
