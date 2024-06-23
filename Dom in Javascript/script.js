@@ -46,3 +46,28 @@
 //  for(let i = 0; i< changeImage.length; i++){
 //     changeImage[i].src = imagesUrl[i]
 //  }
+
+
+// Difference Between InnerText and InnerContent..........................................................
+// const para = document.querySelector("p")
+// console.log(para.innerText);
+
+// const para = document.querySelector("p")
+// console.log(para.textContent);
+
+
+// GetAttribute and SetAttribute..........................................................................
+
+// Get Attributes..........................................
+// const h1 = document.querySelector("h1")
+// console.log(h1.getAttribute("class"));
+
+// const img = document.querySelector("img")
+// console.log(img.getAttribute("src"));
+
+// Set Attributes..........................................
+// const h1 = document.querySelector("h1")
+// console.log(h1.setAttribute("id", "main-heading"));
+
+// const img = document.querySelector("img")
+// console.log(img.setAttribute("class", "pic-style"));
