@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Truthy and Falsy Value</title>
 
-    <!-- Css Code....................................................... -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Jost:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truthy and Falsy Value</title>
 
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 10px 20px;
-        border: 2px solid black;
-      }
+  <!---------------------------- Css Code ------------------------------------------------->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Jost:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-      .main-title{
-    font-size: 45px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    width: 70%;
-    margin: 20px auto;
-    padding: 5px;
-    border-radius: 50px;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 10px 20px;
+      border: 2px solid black;
+      /* background-color: #ddd; */
+      color: rgb(224, 224, 224);
+      background-color: #292929;
+    }
 
-      h1,
-      h2 {
-        font-family: "Jost", sans-serif;
-      }
+    .main-title {
+      font-size: 38px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.117);
+      color: goldenrod;
+      width: 60%;
+      margin: 20px auto;
+      border-radius: 50px;
+      border: 5px solid goldenrod;
+    }
 
-      ul li {
-        font-family: "Protest Riot", sans-serif;
-        line-height: 40px;
-        font-size: 28px;
-      }
+    .title-style {
+      background-color: goldenrod;
+      color: #292929;
+      border-left: 5px solid white;
+      padding-left: 10px;
+    }
 
-      p {
-        font-family: "Poppins", sans-serif;
-        font-size: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="main-title">Truthy and Falsy Values in javaScript</h1>
+    h1,
+    h2
+    {
+      font-family: "Jost", sans-serif;
+    }
 
-    <h1>Truthy and Falsy Values in JavaScript</h1>
-    <h2>Falsy Value:</h2>
+    ol li,
+    li code {
+      font-size: 28px;
+      line-height: 40px;
+      font-family: "Protest Riot", sans-serif;
+    }
 
-    <ul>
-      <li>0</li>
-      <li>-0</li>
-      <li>NaN</li>
-      <li>'' ( Empty String )</li>
-      <li>Null</li>
-      <li>Undefined</li>
-    </ul> 
-    <br>
+    h1,
+    h2 {
+      font-family: "Jost", sans-serif;
+    }
 
-    <h2>Truthy Value:</h2>
-    <p>All other than these are <b><mark>Truthy Values</mark></b>.</p>
-  </body>
+    ul li {
+      font-family: "Protest Riot", sans-serif;
+      line-height: 40px;
+      font-size: 28px;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="main-title">Truthy and Falsy Values in javaScript</h1>
+  <br>
+
+  <h1>Truthy and Falsy Values in JavaScript</h1>
+  <h2>Falsy Value:</h2>
+
+  <ul>
+    <li>0</li>
+    <li>-0</li>
+    <li>NaN</li>
+    <li>'' ( Empty String )</li>
+    <li>Null</li>
+    <li>Undefined</li>
+  </ul>
+  <br>
+
+  <h2>Truthy Value:</h2>
+  <p>All other than these are <b><mark>Truthy Values</mark></b>.</p>
+
+  <!---------------------------- JavaScript Code ------------------------------------------------->
+<script>
+
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")
+
+</script>
+</body>
 </html>

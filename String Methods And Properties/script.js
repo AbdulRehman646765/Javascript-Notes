@@ -131,10 +131,19 @@
 // const splitName = username.split(" ");
 // console.log(splitName); // The result is "['My', 'Name', 'is', 'Abdul', 'Rehman']"
 
-const text1 = "Hello";
-const defineCharText1 = text1.charAt(1)
-console.log(defineCharText1); // The Result is "e"
+// const text1 = "Hello";
+// const defineCharText1 = text1.charAt(1)
+// console.log(defineCharText1); // The Result is "e"
 
-const text2 = "Hello";
-const defineCharText2 = text2[0] 
-console.log(defineCharText2); // The result is "H"
+// const text2 = "Hello";
+// const defineCharText2 = text2[0] 
+// console.log(defineCharText2); // The result is "H"
+  
+
+// *****************************************************************************************************
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")
+h1[2].setAttribute("class", "title-style")
+h1[3].setAttribute("class", "title-style") 

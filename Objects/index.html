@@ -11,115 +11,124 @@
 
 <body>
   <h1 class="main-title">Objects in JavaScript</h1>
-
+  <br>
   <h1>Objects in JavaScript</h1>
-  <h2>
-    There is Only one Type of Non Primitive Data Type that is Called Object.
-  </h2>
-  <h3>Objects are Further Divided into Three Categories.</h3>
+  <h2>There is Only one Type of Non Primitive Data Type that is Called Object.</h2>
+
   <ol>
-    <!-- Object Literals Define.............................................       -->
     <li><code>Object Literals</code></li>
-    <h3>
-      An object in Javascript is an entity having properties and methods.
-      Everything is an object in javascript.
-    </h3>
-    <h2>Syntax Of Objects</h2>
-    <pre>
-          const objectName = {
-            Property: PropertyValue,
-            Property: PropertyValue
-        }        
-        </pre>
-    <h2>Object's Example</h2>
+  </ol>
+  <h3>An object in Javascript is an entity having properties and methods. Everything is an object in javascript.</h3>
 
-    <pre>
-        <strong>Example:</strong> Below is examples.
+  <h2>Syntax Of Objects</h2>
+  <pre>
+      const objectName = {
+        Property: PropertyValue,
+        Property: PropertyValue
+      }        
+  </pre>
+
+  <h1>Some Examples:</h1>
+
+  <h2>User Intro Example</h2>
+  <pre>
+    <strong>Example:</strong> Below is examples.
   
-        const user = {
-          firstName: "Abdul", 
-          lastName: "Rehman",
-          fatherName: "Muhammad Mehdi",
-          age: 23,
-          isEducate: true,
+      const user = {
+        firstName: "Abdul", 
+        lastName: "Rehman",
+        fatherName: "Muhammad Mehdi",
+        age: 23,
+        isEducate: true,
       }
-        console.log(user);
-          <b>// The Result is "{firstName: 'Abdul', lastName: 'Rehman', fatherName: 'Muhammad Mehdi', age: 23, isEducate: true}"</b>
-        </pre>
+      console.log(user);
+        <b>// The Result is "{firstName: 'Abdul', lastName: 'Rehman', fatherName: 'Muhammad Mehdi', age: 23, isEducate: true}"</b>
+  </pre>
 
-    <h2>Another Object's Example</h2>
+  <h2>Another User Intro Example</h2>
+  <pre>
+    <strong>Example:</strong> Below is examples.
+
+      const myIntro = {
+        firstName: "Abdul",
+        lastName: "Rehman",
+        age: 23
+      }
+  </pre>
+
+  <strong class="size_increase">You can access object properties in two ways:</strong>
+  <ol class="height_decrease">
+    <li>Dot Notation</li>
+    <li>Square Bracket Notation</li>
+  </ol>
+  <br />
+
+  <h3>Dot Notation</h2>
     <pre>
-          const myIntro = {
-            firstName: "Abdul",
-            lastName: "Rehman",
-            age: 23
-          }
-        </pre>
+      console.log<b><mark>(myIntro.firstName)</mark></b>; <b>// The Result is "Abdul"</b>
+  </pre>
 
-    <strong class="size_increase">You can access object properties in two ways:</strong>
-    <ol class="height_decrease">
-      <li>Dot Notation</li>
-      <li>Square Bracket Notation</li>
-    </ol>
-    <br />
-
-    <h2>Dot Notation</h2>
+    <h3>Square Bracket Notation</h3>
     <pre>
-        console.log<b><mark>(myIntro.firstName)</mark></b>; <b>// The Result is "Abdul"</b>
-      </pre>
-
-    <h2>Square Bracket Notation</h2>
-    <pre>
-          console.log<b><mark>(myIntro["firstName"])</mark></b>; <b>// The Result is "Abdul"</b>     
-        </pre>
+      console.log<b><mark>(myIntro["firstName"])</mark></b>; <b>// The Result is "Abdul"</b>     
+  </pre>
     <br />
     <h2>Object Into object</h2>
     <pre>
-          const userIntro = {
-            firstName: "Abdul",
-            lastName: "Rehman",
-            age: 23,
-            <b><mark>city:{cityName: "Gujrat", postalCode: 50700, province: "Punjab"}</mark></b>
-        }
-        console.log(userIntro);
-        </pre>
+    <strong>Example:</strong> Below is an example.
+
+      const userIntro = {
+        firstName: "Abdul",
+        lastName: "Rehman",
+        age: 23,
+        <b><mark>city:{cityName: "Gujrat", postalCode: 50700, province: "Punjab"}</mark></b>
+      }
+      console.log(userIntro);
+  </pre>
     <h2>Add New Property after Make Object</h2>
     <pre>
-          let userIntro = {
-            username: "Abdul Rehman",
-        }
-          <b><mark>userIntro.fatherName = "Muhammad Mehdi"</mark></b>; <b>// Add New Property "fatherName"</b>
-          <b><mark>userIntro.age = 23</mark></b>; <b>// Add New Property "age"</b>
-          console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', fatherName: 'Muhammad Mehdi', age: 23}"</b>
-        </pre>
+    <strong>Example:</strong> Below is an example.
 
-    <code class="object_code"><strong>Note!</strong> Const sy Define ky howy <b>Variable</b> ko baad
+      let userIntro = {
+        username: "Abdul Rehman",
+      }
+      <b><mark>userIntro.fatherName = "Muhammad Mehdi"</mark></b>; <b>// Add New Property "fatherName"</b>
+      <b><mark>userIntro.age = 23</mark></b>; <b>// Add New Property "age"</b>
+      console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', fatherName: 'Muhammad Mehdi', age: 23}"</b>
+  </pre>
+
+    <h2>Delete Property after Make Object</h2>
+    <code><strong>Note!</strong> Const sy Define ky howy <b>Variable</b> ko baad
           main <b>Change</b> nai kar sakty. but ik tareeky sy <b>Change</b> kar
           sakty hain. ager Change is tarah kia jye jis tarah
           <b>Below Example</b> main kia gya hai.</code>
     <pre>
-          <b>const</b> userIntro = {
-            username: "Abdul Rehman",
+      <strong>Example:</strong> Below is an example.
+
+        <b>const</b> userIntro = {
+          username: "Abdul Rehman",
         }
-          userIntro.fatherName = "Muhammad Mehdi";
-          userIntro.age = 23;
-          console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', fatherName: 'Muhammad Mehdi', age: 23}"</b>
-        </pre>
+        userIntro.fatherName = "Muhammad Mehdi";
+        userIntro.age = 23;
+        console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', fatherName: 'Muhammad Mehdi', age: 23}"</b>
+    </pre>
 
     <h2>Delete Property after Make Object</h2>
     <pre>
-          const userIntro = {
-            username: "Abdul Rehman",
-            age: 23,
-            phoneNumber: "0340 3148438"
+      <strong>Example:</strong> Below is an example.
+
+        const userIntro = {
+          username: "Abdul Rehman",
+          age: 23,
+          phoneNumber: "0340 3148438"
         }
-          <b>delete userIntro.phoneNumber</b>
+        <b>delete userIntro.phoneNumber</b>
           
-          <b>// Before Delete Result</b>
-          console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', age: 23, phoneNumber: '0340 3148438'}"</b>
-          <b>// After Delete Result</b>
-          console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', age: 23}"</b>
-        </pre>
+        <b>// Before Delete Result</b>
+        console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', age: 23, phoneNumber: '0340 3148438'}"</b>
+        <b>// After Delete Result</b>
+        console.log(userIntro); <b>// The Result is "{username: 'Abdul Rehman', age: 23}"</b>
+    </pre>
 
     <p class="object_para">
       <b>Object. seal() creates a “sealed” object, while Object. freeze()
@@ -128,52 +137,57 @@
       completely <b>immutable</b>. Both methods return the modified object
       itself.
     </p>
-    <h2>Object.seal()</h2>
+    <h1>Object.seal()</h1>
     <pre>
-          const userIntro = {
-            firstName: "Abdul",
-            lastName: "Rehman",
-            age: 23,
-        }
-          <b><mark>Object.seal(userIntro)</mark></b>
-          <mark>userIntro.lastName = "Qadeer"</mark> <b>// This Change Property</b>
-          delete userIntro.lastName <b>// This Delete Property</b>
-          userIntro.isGraduate = true <b>// This Add New Property</b>
-          console.log(userIntro);
-          <b>// The Result is "{firstName: 'Abdul', <mark>lastName: 'Qadeer'</mark>, age: 23}"</b>
-        </pre>
+      <strong>Example:</strong> Below is an example.
 
-    <h2>Object.freeze()</h2>
-    <pre>
-          const userIntro = {
-            firstName: "Abdul",
-            lastName: "Rehman",
-            age: 23,
+        const userIntro = {
+          firstName: "Abdul",
+          lastName: "Rehman",
+          age: 23,
         }
-          <b><mark>Object.freeze(userIntro)</mark></b>
-          userIntro.lastName = "Qadeer" <b>// This Change Property</b>
-          delete userIntro.age <b>// This Delete Property</b>
-          userIntro.isGraduate = true <b>// This Add New Property</b>
-          console.log(userIntro);
-          <b>// The Result is "{firstName: 'Abdul', lastName: 'Rehman', age: 23}"</b>
+        <b><mark>Object.seal(userIntro)</mark></b>
+        <mark>userIntro.lastName = "Qadeer"</mark> <b>// This Change Property</b>
+        delete userIntro.lastName <b>// This Delete Property</b>
+        userIntro.isGraduate = true <b>// This Add New Property</b>
+        console.log(userIntro);
+        <b>// The Result is "{firstName: 'Abdul', <mark>lastName: 'Qadeer'</mark>, age: 23}"</b>
+    </pre>
+
+    <h1>Object.freeze()</h1>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+
+        const userIntro = {
+          firstName: "Abdul",
+          lastName: "Rehman",
+          age: 23,
+        }
+        <b><mark>Object.freeze(userIntro)</mark></b>
+        userIntro.lastName = "Qadeer" <b>// This Change Property</b>
+        delete userIntro.age <b>// This Delete Property</b>
+        userIntro.isGraduate = true <b>// This Add New Property</b>
+        console.log(userIntro);
+        <b>// The Result is "{firstName: 'Abdul', lastName: 'Rehman', age: 23}"</b>
   
 <strong>Note!</strong> Is Conditions Main na koi Property <b><mark>Change</mark></b> hoi, na <b><mark>Delete</mark></b> hoi or na hi <b><mark>New Add</mark></b> hoi. Kio ky Hum ny is
 Method <b><mark>"object.freeze()"</mark></b> ka use kia. 
         </pre>
 
-    <h2>In Keyword in JavaScript</h2>
+    <h1>In Keyword in JavaScript</h1>
     <pre>
-          const user = {
-            firstName: "Abdul",
-            lastName: "Rehman",
-            age: 23
-        }
-          <b><mark>"Abdul" in user</mark></b>
-          console.log(user);
-          console.log("firstName" in user);  <b>// The Result is "True"</b>
-          console.log("phoneNumber" in user);  <b>// The Result is "False"</b>
-        </pre>
+      <strong>Examlpe:</strong> Below is an example.
 
+        const user = {
+          firstName: "Abdul",
+          lastName: "Rehman",
+          age: 23
+        }
+        <b><mark>"Abdul" in user</mark></b>
+        console.log(user);
+        console.log("firstName" in user);  <b>// The Result is "True"</b>
+        console.log("phoneNumber" in user);  <b>// The Result is "False"</b>
+    </pre>
 
     <script src="script.js"></script>
 </body>

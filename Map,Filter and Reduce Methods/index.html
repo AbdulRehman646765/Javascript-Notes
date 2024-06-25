@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Map,Filter and Reduce</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <h1 class="main-title">ForEach, Map, Filter and Reduce in JavaScript</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map,Filter and Reduce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <h1>ForEach Array Method</h1>
-    <h1>ForEach loop Syntax:</h1>
-    <pre>
+<body>
+  <h1 class="main-title">ForEach, Map, Filter and Reduce in JavaScript</h1>
+  <br>
+  <h1>ForEach Array Method</h1>
+  <h2>ForEach loop Syntax:</h2>
+  <pre>
       array.forEach(function(currentValue, index, arr), thisValue)
       <h2>Parameters:</h2>
       <b>function()</b>
@@ -33,12 +34,12 @@
                 A value passed to the function as its this value.
     </pre>
 
-    <h1>Some Examples:</h1>
-    <h2>
-      Books Example
-      <span class="head-span">with anonymous function and arrow function</span>
-    </h2>
-    <pre>
+  <h1>Some Examples:</h1>
+  <h2>
+    Books Example
+    <span class="head-span">with anonymous function and arrow function</span>
+  </h2>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
         const books = ["Urdu", "English", "Islamic Studies", "Physics", "Chemistry"];
@@ -48,8 +49,8 @@
         })
     </pre>
 
-    <h2>Animals Example <span class="head-span">with named function</span></h2>
-    <pre>
+  <h2>Animals Example <span class="head-span">with named function</span></h2>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
         const animals = ["Horse", "Cat", "Dog", "Tiger", "Lion"];
@@ -62,10 +63,10 @@
       <strong>Note!</strong> Named function itna common nai hai jitna anonymous function common hai. 
     </pre>
 
-    <h2>
-      Another ForEach Example <span class="head-span">with return value</span>
-    </h2>
-    <pre>
+  <h2>
+    Another ForEach Example <span class="head-span">with return value</span>
+  </h2>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
         const vegetables = ["Potato", "Cucumber", "Beetroot", "Garlic", "Ginger"];
@@ -85,16 +86,17 @@
       <b>Ginger</b>
       <b><mark>undefined</mark></b> // This is Return value output
     </pre>
-    <hr />
+  <br>
 
-    <h1>Map:</h1>
-    <p>
-      <b>Map</b> aur <b>ForEach</b> dono same hi hain. <b>Difference</b> sirf
-      itna hai ky <b><mark>Map</mark></b> ki return value hoti hai lekin
-      <b><mark>ForEach</mark></b> ki return value nai hoti.
-    </p>
-    <h2>Map Syntax:</h2>
-    <pre>
+  <!------------------------------- Map Array Method ----------------------------->
+  <h1>Map Array Method</h1>
+  <p>
+    <b>Map</b> aur <b>ForEach</b> dono same hi hain. <b>Difference</b> sirf
+    itna hai ky <b><mark>Map</mark></b> ki return value hoti hai lekin
+    <b><mark>ForEach</mark></b> ki return value nai hoti.
+  </p>
+  <h2>Map Syntax:</h2>
+  <pre>
         array.map(function(currentValue, index, arr), thisValue)
         <h2>Parameters:</h2>
       <b>function()</b>
@@ -114,9 +116,9 @@
                 A value passed to the function as its this value.
     </pre>
 
-    <h1>Some Examples:</h1>
-    <h2>Days Example</h2>
-    <pre>
+  <h1>Some Examples:</h1>
+  <h2>Days Example</h2>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
         const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
@@ -136,8 +138,8 @@
       <strong>Note!</strong> ager hum kuch b return nai karyn gy tu return main aik array aye ga kis main har value ko undefined print kary ga.
     </pre>
 
-    <h2>Another Example <span class="head-span">with Return value</span></h2>
-    <pre>
+  <h2>Another Example <span class="head-span">with Return value</span></h2>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
         const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
@@ -162,8 +164,8 @@
       <strong>Note!</strong> In methods ko <b><mark>non distracted methods</mark></b> kehtay hain. mean ky yeh Original array ko <b><mark>Destroy</mark></b> nai karta.        
     </pre>
 
-    <h2>How to define array's index</h2>
-    <pre>
+  <h2>How to define array's index</h2>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
       const fruits = ["Apple", "Banana", "Peach", "Mango", "Orange"];
@@ -172,33 +174,29 @@
         console.log(<b><mark>arr</mark></b>);
       })
     </pre>
-
-    <h1>Filter</h1>
-    <code
-      ><strong>Note!</strong> Filter method <b><mark>True</mark></b> aur
+  <!------------------------------- Filter Array Method ----------------------------->
+  <h1>Filter Array Method</h1>
+  <code><strong>Note!</strong> Filter method <b><mark>True</mark></b> aur
       <b><mark>False</mark></b> values ky hesaab sy print karta hai. Jis value
       ky lye <b><mark>False</mark></b> ho ga usy <b><mark>skip</mark></b> kar dy
       ga. or jis ky lye <b><mark>True</mark></b> ho ga usy
-      <b><mark>Print</mark></b> kary ga.</code
-    >
-    <br />
-    <br />
-    <code
-      ><strong>Note!</strong> Yahan par yeh <b><mark>True</mark></b> aur
+      <b><mark>Print</mark></b> kary ga.</code>
+  <br />
+  <br />
+  <code><strong>Note!</strong> Yahan par yeh <b><mark>True</mark></b> aur
       <b><mark>False</mark></b> nai print kar raha. Balky jis ky lye
       <b><mark>True</mark></b> aur <b><mark>False</mark></b> hai usy print kar
-      raha hai.</code
-    >
+      raha hai.</code>
 
-    <h2>Filter Syntax:</h2>
-    <pre>
+  <h2>Filter Syntax:</h2>
+  <pre>
       array.filter(function(currentValue, index, arr), thisValue)
     </pre>
 
-    <h1>Some Examples:</h1>
-    <h2>vegetables Example</h2>
+  <h1>Some Examples:</h1>
+  <h2>vegetables Example</h2>
 
-    <pre>
+  <pre>
       <strong>Example:</strong> Below is an example.
 
       const vegetables = ["Garlic", "Ginger", "Onion", "Cucumber", "Tomato"];
@@ -209,8 +207,8 @@
       console.log(filteredVegetables); <b>// all values returned but <mark>cucumber value skipped</mark>. because cucumbers value length is 8.</b>
     </pre>
 
-    <h2>Another Example</h2>
-    <pre>
+  <h2>Another Example</h2>
+  <pre>
       <strong>Note!</strong> Below is an example.
 
       const vegetables = ["Garlic", "Ginger", "Onion", "Cucumber", "Tomato"];
@@ -222,8 +220,8 @@
       console.log(filteredVegetables); <b>// The Result is "(2) ['Onion', 'Tomato']"</b>
     </pre>
 
-    <h2>Filter index Example</h2>
-    <pre>
+  <h2>Filter index Example</h2>
+  <pre>
       <strong>Note!</strong> Below is an example.
 
       const vegetables = ["Garlic", "Ginger", "Onion", "Cucumber", "Tomato"];
@@ -234,8 +232,8 @@
       console.log(filteredVegetables); <b>// The Result is "(2) ['Cucumber', 'Tomato']"</b>
     </pre>
 
-    <h2>Separate adult Students in some students</h2>
-    <pre>
+  <h2>Separate adult Students in some students</h2>
+  <pre>
       <strong>Note!</strong> Below is an example.
 
       const students = [
@@ -277,8 +275,8 @@
       console.log(adultStudentName); <b>// The Result is "(3) ['Ali Hassan', 'Bilal Hassan', 'Abdul Rehman']"</b>
   </pre>
 
-    <h2>Chaining array method</h2>
-    <pre>
+  <h2>Chaining array method</h2>
+  <pre>
       <strong>Note!</strong> Below is an example.
 
       const students = [
@@ -318,11 +316,12 @@
 
       console.log(adultStudent); <b>// The Result is "<mark>(2) ['ALI HASSAN', 'ABDUL REHMAN']</mark>"</b>
     </pre>
-    <hr>
+  <br>
 
-    <h1>Reduce</h1>
-    <h2>Syntax of Reduce:</h2>
-    <pre>
+  <!------------------------------- Filter Array Method ----------------------------->
+  <h1>Reduce Array Method</h1>
+  <h2>Syntax of Reduce:</h2>
+  <pre>
       array.reduce(function(total, currentValue, currentIndex, arr), initialValue)    
     <h2>Parameters:</h2>
       <b>function()</b>
@@ -345,9 +344,9 @@
                 A value to be passed to the function as the initial value.
     </pre>
 
-    <h1>Some Examples</h1>
-    <h2>Numbers Example</h2>
-    <pre>
+  <h1>Some Examples</h1>
+  <h2>Numbers Example</h2>
+  <pre>
       <strong>Note!</strong> // ager hum initial value main kuch bhi pass karyn gy tu wo accumulator ki first value ho jye gi. ager kuch b pass 
                 na karyn tu first value wo hi ho gi jo hum ny array main define ki.
 
@@ -369,12 +368,14 @@
          main save karyn gy. jesa kay hum ny <b><mark>"sum"</mark></b> name sy variable create kia hai.
     </pre>
 
-    <h2>Yeh sab Methods loop karty hain. ager hamy sirf loop karwana ho tu hum ForEach Method ka use karyn gy. ager koi or specific kaam karwana hai tu hum in sab Methods ka use karty hain.</h2>
+  <h2>Yeh sab Methods loop karty hain. ager hamy sirf loop karwana ho tu hum ForEach Method ka use karyn gy. ager koi or
+    specific kaam karwana hai tu hum in sab Methods ka use karty hain.</h2>
 
-    
 
-      
 
-    <script src="script.js"></script>
-  </body>
+
+
+  <script src="script.js"></script>
+</body>
+
 </html>

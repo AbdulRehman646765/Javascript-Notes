@@ -10,16 +10,17 @@
 
   <body>
     <h1 class="main-title">Logical Operators in JavaScript</h1>
-
+    <br>
     <h1>Logical Operators</h1>
-    <ol class="logical_operators">
+    <ol>
       <li><b>&&</b> (And)</li>
+    </ol>
       <h3>
         is condition main 2nu variables <mark>(isSchoolStudent & isCollegeStudent)</mark> equal mean <mark>True</mark> hony zaroori hain nai tu result <mark>False</mark> aye ga. <br />
       </h3>
-
-      <h2>Some Examples</h2>
       <pre>
+      <strong>Example:</strong> Below is an example.
+
             const userAge = 18;
             const isSchoolStudent = (userAge >= 5) && (userAge <= 18); <b>// True Value</b>
             const isCollegeStudent = (userAge >= 18) && (userAge <= 25); <b>// True Value</b>
@@ -27,13 +28,15 @@
             console.log(isStudent);
         </pre
       >
-
+      <ol>
       <li><b>||</b> (Or)</li>
+      </ol>
       <h3>
         is condition main 2nu variables <mark>(isSchoolStudent & isCollegeStudent)</mark> main sy ager 1 b <mark>True</mark> ho tu result <mark>True</mark> aye ga. <br />
       </h3>
-      <h2>Some Examples</h2>
       <pre>
+        <strong>Example:</strong> Below is an example.
+      
             const userAge = 25;
             const isSchoolStudent = (userAge >= 5) && (userAge <= 18); <b>// False Value</b>
             const isCollegeStudent = (userAge >= 18) && (userAge <= 25); <b>// True Value</b>
@@ -41,23 +44,23 @@
             console.log(isStudent);
         </pre
       >
-
+      <ol>
       <li><b>!</b> (Not)</li>
+      </ol>
       <h3>
         yeh operator <mark>"!"</mark> Truthy value ko <mark>False</mark> or Falsy value ko
         <mark>True</mark> kar deta hai. <br />
       </h3>
-      
-      <h2>Some Examples</h2>
         <pre>
+          <strong>Example:</strong> Below is an example.
+      
             const userAge = 25;
             const isSchoolStudent = (userAge >= 5) && (userAge <= 18); <b>// False Value</b>
             console.log(<b><mark>!</mark></b>isSchoolStudent); <b>// True Value</b> 
             const isCollegeStudent = (userAge >= 18) && (userAge <= 25); <b>// True Value</b>
             console.log(<b><mark>!</mark></b>isCollegeStudent); <b>// False Value</b>
         </pre>
-    </ol>
 
-    <script src="logical_operators.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

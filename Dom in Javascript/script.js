@@ -71,3 +71,31 @@
 
 // const img = document.querySelector("img")
 // console.log(img.setAttribute("class", "pic-style"));
+
+
+// Change styles using JavaScript.............................................................................
+// const allParagraphs = document.querySelectorAll("p")
+// allParagraphs[0].style.color = "goldenrod"  
+// allParagraphs[1].style.color = "goldenrod"  
+
+// // Apply Style with For loop....................................
+// const allStrongTag = document.querySelectorAll("strong")
+// for(let i = 0; i < allStrongTag.length; i++){
+//     allStrongTag[i].style.color = "goldenrod"
+// }
+
+// // Apply Style with For of loop.................................
+// for(const tagStyle of allStrongTag){
+//     tagStyle.style.textShadow = "0 0 10px white"
+// }
+
+// Hum is tarah b style add kar sakty hain jesy hum Css main likhty hain................................
+// const allParagraphs = document.querySelectorAll("p")
+// for(const paragraphs of allParagraphs){
+//     paragraphs.style.cssText = `
+//     font-family: "Poppins", sans-serif; 
+//     color: white;
+//     background-color: ;
+//     padding-left: 10px;
+//     border-left: 5px solid white; `
+// }

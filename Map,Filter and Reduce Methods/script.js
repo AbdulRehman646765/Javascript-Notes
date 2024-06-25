@@ -127,10 +127,24 @@
 //   });
 // console.log(adultStudent);
 
-// Reduce Method...........................................................................................
-const numbers = [1, 2, 3,];
-const sum = numbers.reduce((accumulator, current, index) => {
-  console.log(accumulator, current);
-  return accumulator + current;
-}, 0);
-console.log(sum);
+// // Reduce Method...........................................................................................
+// const numbers = [1, 2, 3,];
+// const sum = numbers.reduce((accumulator, current, index) => {
+//   console.log(accumulator, current);
+//   return accumulator + current;
+// }, 0);
+// console.log(sum);
+
+
+// *****************************************************************************************************
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")
+h1[2].setAttribute("class", "title-style")
+h1[3].setAttribute("class", "title-style")
+h1[4].setAttribute("class", "title-style") 
+h1[5].setAttribute("class", "title-style") 
+h1[6].setAttribute("class", "title-style") 
+h1[7].setAttribute("class", "title-style") 
+h1[8].setAttribute("class", "title-style") 

@@ -26,3 +26,10 @@
 // let user1Age = 18;
 // let user2Age = "18";
 // console.log(user1Age !== user2Age); 
+
+
+// *****************************************************************************************************
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")

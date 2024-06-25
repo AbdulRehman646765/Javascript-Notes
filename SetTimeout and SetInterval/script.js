@@ -26,14 +26,25 @@
 // const timer3 = setInterval(test, 3000) // This SetInterval is Higher Order Function
 
 
-for(let i = 1; i <= 3; i++){
-  console.log(i);
-}
+// for(let i = 1; i <= 3; i++){
+//   console.log(i);
+// }
 
-function test(){
-  console.log("Salam");
-}
+// function test(){
+//   console.log("Salam");
+// }
 
-setTimeout(test, 1000)
+// setTimeout(test, 1000)
 
-console.log("Hello");
+// console.log("Hello");
+  
+
+// *****************************************************************************************************
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")
+h1[2].setAttribute("class", "title-style")
+h1[3].setAttribute("class", "title-style")
+h1[4].setAttribute("class", "title-style") 
+h1[5].setAttribute("class", "title-style") 

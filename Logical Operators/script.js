@@ -25,3 +25,10 @@
 // console.log(!isSchoolStudent); // True Value
 // const isCollegeStudent = (userAge >= 18) && (userAge <= 25); // True Value
 // console.log(!isCollegeStudent); // False Value
+
+
+// *****************************************************************************************************
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")

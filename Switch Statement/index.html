@@ -9,6 +9,7 @@
   </head>
   <body>
     <h1 class="main-title">Switch Statement in javaScript</h1>
+    <br>
 
     <h1>Switch Statement</h1>
     <h2>Syntax Of Switch Statement:</h2>
@@ -23,54 +24,55 @@
         }
     </pre>
 
-    <h2>Example Of Switch Statement:</h2>
+    <h1>Example Of Switch Statement:</h1>
     <pre>
       <strong>Example:</strong> Below is an example.
 
-      const username = prompt("Please Enter Your Name.") || "Chaudhary";
-      const userAge = parseInt(prompt("Please Enter Your Age.")) || 23;
+        const username = prompt("Please Enter Your Name.") || "Chaudhary";
+        const userAge = parseInt(prompt("Please Enter Your Age.")) || 23;
+      
+        console.log(`Name: ${username}`);
+        console.log(`Age: ${userAge}`);
+      
+        switch (true) {
+          case userAge < 0:
+            console.log("Please Enter a Valid Age.");
+            break;
+        
+          case userAge >= 0 && userAge <= 4:
+            console.log(`${username} is a Kid.`);
+            console.log("This Age is Playing Age.");
+            break;
+        
+          case userAge >= 5 && userAge <= 18:
+            console.log(`${username} is a School Student.`);
+            console.log("He/She Study in Jinnah Public School.");
+            break;
 
-      console.log(`Name: ${username}`);
-      console.log(`Age: ${userAge}`);
+          case userAge >= 18 && userAge <= 21:
+            console.log(`${username} is a College Student.`);
+            console.log("He/She Study in Punjab College.");
+            console.log("He/She Learning in Computer Science.");
+            break;
 
-      switch (true) {
-        case userAge < 0:
-          console.log("Please Enter a Valid Age.");
-          break;
+          case userAge >= 21 && userAge <= 26:
+            console.log(`${username} is a University Student.`);
+            console.log("He/She Study in UOG (University Of Gujrat).");
+            break;
 
-        case userAge >= 0 && userAge <= 4:
-          console.log(`${username} is a Kid.`);
-          console.log("This Age is Playing Age.");
-          break;
+          case userAge >= 26 && userAge <= 50:
+            console.log(`${username} is a Working Professional.`);
+            console.log("He/She is a Software Engineer.");
+            console.log("He/She Work in Devsinc Company.");
+            break;
 
-        case userAge >= 5 && userAge <= 18:
-          console.log(`${username} is a School Student.`);
-          console.log("He/She Study in Jinnah Public School.");
-          break;
-
-        case userAge >= 18 && userAge <= 21:
-          console.log(`${username} is a College Student.`);
-          console.log("He/She Study in Punjab College.");
-          console.log("He/She Learning in Computer Science.");
-          break;
-
-        case userAge >= 21 && userAge <= 26:
-          console.log(`${username} is a University Student.`);
-          console.log("He/She Study in UOG (University Of Gujrat).");
-          break;
-
-        case userAge >= 26 && userAge <= 50:
-          console.log(`${username} is a Working Professional.`);
-          console.log("He/She is a Software Engineer.");
-          console.log("He/She Work in Devsinc Company.");
-          break;
-
-        default:
-          console.log(`${username} is a Software Engineer Retired.`);
-          console.log("He/She was a Working Professional.");
-      }
-      console.log("Thank You Dear User!");
+          default:
+            console.log(`${username} is a Software Engineer Retired.`);
+            console.log("He/She was a Working Professional.");
+        }
+        console.log("Thank You Dear User!");
     </pre>
-    <script src="switch_statement.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>

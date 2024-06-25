@@ -27,4 +27,15 @@
 //     return num < 8;
 // });
 // console.log(result);
+  
+
+// *****************************************************************************************************
+// Headings Style.................................................
+const h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[1].setAttribute("class", "title-style")
+h1[2].setAttribute("class", "title-style")
+h1[3].setAttribute("class", "title-style")
+h1[4].setAttribute("class", "title-style") 
+h1[5].setAttribute("class", "title-style") 
 
