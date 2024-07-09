@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Courgette&family=Jost:ital,wght@0,100..900;1,100..900&family=Protest+Riot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 20px;
+  border: 2px solid black;
+  color: rgb(224, 224, 224);
+  background-color: #292929;
+}
+
+.main-title {
+  font-size: 45px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.117);
+  color: goldenrod;
+  width: 40%;
+  margin: 20px auto;
+  border-radius: 50px;
+  border: 5px solid goldenrod;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Jost", sans-serif;
+}
+
+ol li,
+ul li,
+li code {
+  font-size: 23px;
+  line-height: 40px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+pre,
+code {
+  font-size: 17px;
+  line-height: 25px;
+}
+
+strong {
+  font-size: 20px;
+  color: goldenrod;
+}
+
+h1 span {
+  color: rgb(255, 236, 224);
+  text-shadow: 0 0 10px #292929;
+}
+
+.title-style {
+  background-color: goldenrod;
+  color: #292929;
+  border-left: 5px solid white;
+  padding-left: 10px;
+}
+
+/* addEventListener Add New Card */
+.head-container {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container .add-card::after {
+  content: "Add Card";
+  font-size: 22px;
+  padding-bottom: 20px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.container .add-card {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: #292929;
+  color: goldenrod;
+  border: 3px solid goldenrod;
+  font-size: 50px;
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 0 4px goldenrod;
+  text-shadow: 0 0 0;
+  cursor: pointer;
+}
+
+.container .add-card:hover {
+  box-shadow: 0 0 10px goldenrod;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 93px;
+  height: 120px;
+  background-color: rgb(123, 89, 5);
+  border: 4px ridge goldenrod;
+  /* font-family: "Protest Riot", sans-serif; */
+  font-family: "Poppins", sans-serif; 
+  font-size: 42px;
+  font-weight: 600;
+  color: #292929;
+  text-shadow: 0 0 8px goldenrod, 0 0 16px rgb(84, 60, 0), 0 0 8px goldenrod,
+    0 0 16px rgb(84, 60, 0), 0 0 8px goldenrod;
+  padding: 5px;
+}
+
+.add-card-btn {
+  position: absolute;
+  top: 0px;
+  right: 450px;
+  padding: 9.5px 35px;
+  background-color: #292929;
+  border: 0.2px solid goldenrod;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.add-card-btn:hover {
+  font-weight: 600;
+  background-color: #363636;
+}
+
+.add-card-btn a {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+/* Reached Heading in Cards  */
+.container-2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.container-2 .reached-head {
+  position: relative;
+  color: red;
+  font-size: 26px;
+}
+
+.container-2 .reached-head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #292929;
+  border-left: 4px solid red;
+  animation: animate 6s steps(25) infinite;
+}
+
+@keyframes animate {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+/* Form Event and Event Object */
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: goldenrod;
+  font-weight: 500;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  background-color: #292929;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgba(128, 128, 128, 0.407);
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  outline: none;
+  border: 1px solid #dddfe2;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1px solid goldenrod;
+  box-shadow: 0px 2px 10px 0px rgba(218, 165, 32, 0.1),
+    0px 4px 20px 0px rgba(218, 165, 32, 0.1);
+}
+
+fieldset#input-event {
+  height: 525px;
+}
+
+fieldset.submit-fieldset {
+  height: 350px;
+}
+
+fieldset {
+  border: 2px solid goldenrod;
+  height: 410px;
+}
+
+legend {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  color: goldenrod;
+  font-weight: 500;
+  background-color: #292929;
+  border: 2px solid goldenrod;
+  border-radius: 50px;
+}
+
+.form-btn {
+  background-color: goldenrod;
+  padding: 10px 20px;
+  color: #292929;
+  border: none;
+  border-radius: 50px;
+  border-left: 5px solid rgb(224, 224, 224);
+  border-right: 5px solid rgb(224, 224, 224);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.form-btn:hover {
+  border-left: 5px solid goldenrod;
+  border-right: 5px solid goldenrod;
+  font-weight: 700;
+  background-color: rgb(224, 224, 224);
+}
+
+/* Keyboard events in JavaScript */
+.keyboard-e-container-1 {
+  position: relative;
+  height: 680px;
+}
+
+.imagine-win-box-1,
+.imagine-win-box-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 183, 0, 0.105);
+  height: 400px;
+  border: 2px solid goldenrod;
+  box-shadow: 0 0 8px goldenrod;
+  animation: change-color 2s ease infinite;
+}
+
+@keyframes change-color {
+  25% {
+    box-shadow: 0 0 5px rgb(48, 218, 32);
+  }
+  50% {
+    box-shadow: 0 0 5px rgb(32, 38, 218);
+  }
+  75% {
+    box-shadow: 0 0 5px rgb(218, 32, 32);
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(116, 32, 218);
+  }
+}
+
+.imagine-win-box-1 h2,
+.imagine-win-box-2 h2 {
+  position: absolute;
+  top: -45px;
+  background-color: #292929;
+  border: 2px solid goldenrod;
+  border-radius: 50px;
+  height: 36px;
+  padding: 5px 15px;
+}
+
+.key-h2,
+.key-up-h2 {
+  position: absolute;
+  display: inline;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.keyboard-e-container-2 {
+  height: 483px;
+}
+
+/* Mouse Events in JavaScript */
+.mouse-fieldset {
+  height: 295px;
+}
+
+.mouse-over-btn span {
+  background-color: #292929;
+  color: goldenrod;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+/* Event Bubbling and Event Capturing in JavaScript */
+
+.heading-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 200px;
+}
+
+.golden {
+  background-color: goldenrod;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.gray {
+  background-color: #292929;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.white {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}

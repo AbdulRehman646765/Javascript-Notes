@@ -1,149 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom in JavaScript</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1 class="main-title">DOM in JavaScript</h1>
+    <br />
 
-    <h1 id="main-head" class="title-style">Document Object Model (DOM) in JavaScript</h1>
+    <h1 id="main-head">Document Object Model (DOM) in JavaScript</h1>
+    <h2>
+      When a web page is loaded, the browser creates a Document Object Model of
+      the page. <br />
+      The HTML DOM model is constructed as a tree of Objects.
+    </h2>
+    <br />
+
+    <h2 class="dom-tree">The HTML DOM Tree of Objects:</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        <img src="img/pic1.jpg" alt="pic1" title="Html DOM Tree">
+    </pre>
+    <br />
+
+    <h2>
+      With the object model, JavaScript gets all the power it needs to create
+      dynamic HTML.
+    </h2>
+    <ul>
+      <li>JavaScript can change all the HTML elements in the page.</li>
+      <li>JavaScript can change all the HTML attributes in the page.</li>
+      <li>JavaScript can change all the CSS styles in the page.</li>
+      <li>JavaScript can remove existing HTML elements and attributes.</li>
+      <li>JavaScript can add new HTML elements and attributes.</li>
+      <li>JavaScript can react to all existing HTML events in the page.</li>
+      <li>JavaScript can create new HTML events in the page.</li>
+    </ul>
+    <br />
+
     <h1 class="first-head">Selecting Element in JavaScript</h1>
     <h2>There are several ways:</h2>
     <ol>
-        <li>Finding HTML elements by id</li>
-        <li>Finding HTML elements by tag name</li>
-        <li>Finding HTML elements by class name</li>
-        <li>Finding HTML elements by CSS selectors</li>
-        <li>Finding HTML elements by HTML object collections</li>
+      <li>Finding HTML elements by id</li>
+      <li>Finding HTML elements by tag name</li>
+      <li>Finding HTML elements by class name</li>
+      <li>Finding HTML elements by CSS selectors</li>
+      <li>Finding HTML elements by HTML object collections</li>
     </ol>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Finding HTML Element by <span>Id</span></h1>
-    <p>The <b><mark>"easiest way"</mark></b> to find an HTML element in the DOM, is by using the element id.</p>
+    <!------------------------ Finding HTML Element by Id --------------------------------->
+
+    <h1>Finding HTML Element by <span>Id</span></h1>
+    <p>
+      The <b><mark>"easiest way"</mark></b> to find an HTML element in the DOM,
+      is by using the element id.
+    </p>
     <h2>Example of Element by Id</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic1.jpg" alt="pic1" title="Finding HTML Element by Id">
+        <img src="img/pic2.jpg" alt="pic2" title="Finding HTML Element by Id">
     </pre>
-    <hr>
-    
-    <h1 class="title-style">Finding HTML Element by <span>Tag Name</span></h1>
+    <br />
+
+    <!------------------------ Finding HTML Element by Tag Name ---------------------------->
+
+    <h1>Finding HTML Element by <span>Tag Name</span></h1>
     <h2>Example of Element by Tag Name</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic2.jpg" alt="pic2" title="Finding HTML Element by Tag Name">
+        <img src="img/pic3.jpg" alt="pic3" title="Finding HTML Element by Tag Name">
     </pre>
-    <hr>
-    
-    <h1 class="title-style">Finding HTML Element by <span>Class Name</span></h1>
+    <br />
+
+    <!------------------------ Finding HTML Element by Class Name ---------------------------->
+
+    <h1>Finding HTML Element by <span>Class Name</span></h1>
     <h2>Example of Element by Class Name</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic3.jpg" alt="pic3" title="Finding HTML Element by Class Name">
+        <img src="img/pic4.jpg" alt="pic4" title="Finding HTML Element by Class Name">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Finding HTML Element by <span>CSS Selectors</span></h1>
+    <!------------------------ Finding HTML Element by CSS Selectors ------------------------->
+
+    <h1>Finding HTML Element by <span>CSS Selectors</span></h1>
     <h2>Example of Element by CSS Selectors</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic4.jpg" alt="pic4" title="Finding HTML Element by CSS Selectors">
+        <img src="img/pic5.jpg" alt="pic5" title="Finding HTML Element by CSS Selectors">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Finding HTML Element by <span>Nested Selector</span></h1>
+    <!------------------------ Finding HTML Element by Nested Selector ------------------------->
+
+    <h1>Finding HTML Element by <span>Nested Selector</span></h1>
     <h2>Example of Element by Nested Selector</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic5.jpg" alt="pic5" title="Finding HTML Element by Nested Selector">
+        <img src="img/pic6.jpg" alt="pic6" title="Finding HTML Element by Nested Selector">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Finding HTML Element by <span>Attribute Selector</span></h1>
+    <!------------------------ Finding HTML Element by Attribute Selector ----------------------->
+
+    <h1>Finding HTML Element by <span>Attribute Selector</span></h1>
     <h2>Example of Element by Attribute Selector</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic6.jpg" alt="pic6" class="pic6" title="Finding HTML Element by Attribute Selector">
+        <img src="img/pic7.jpg" alt="pic7" title="Finding HTML Element by Attribute Selector">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Replace one image to another image</h1>
+    <!-------------------- Replace one image to another image in JavaScript ---------------------->
+
+    <h1>Replace one image to another image</h1>
     <h2>Example of Replace Image</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic7.jpg" alt="pic7" title="Finding HTML Element by Replace Image">
+        <img src="img/pic8.jpg" alt="pic8" title="Finding HTML Element by Replace Image">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Another Example: Replace one image to another image</h1>
+    <!-------------------- Replace one image to another image in JavaScript ---------------------->
+
+    <h1>Another Example: Replace one image to another image</h1>
     <h2>Example of Replace Images</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic8.jpg" alt="pic8" title="Finding HTML Element by Replace Images">
+        <img src="img/pic9.jpg" alt="pic9" title="Finding HTML Element by Replace Images">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Difference Between InnerText and InnerContent</h1>
-    <p>Using <b><mark>"textContent"</mark></b> will return the complete text content, including the hidden text. However, using <b><mark>"innerText"</mark></b> will only return the visible text content, excluding the hidden text.</p>
+    <!----------------------- Difference Between InnerText and InnerContent ---------------------->
+
+    <h1>Difference Between InnerText and InnerContent</h1>
+    <p>
+      Using <b><mark>"textContent"</mark></b> will return the complete text
+      content, including the hidden text. However, using
+      <b><mark>"innerText"</mark></b> will only return the visible text content,
+      excluding the hidden text.
+    </p>
     <h2>Example of Difference Between InnerText and InnerContent</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
 
-        <img src="img/pic9.JPG" alt="pic9" title="InnerText and InnerContent">
+        <img src="img/pic10.JPG" alt="pic10" title="InnerText and InnerContent">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">GetAttribute and SetAttribute</h1>
+    <!---------------------- GetAttribute and SetAttribute in JavaScript ------------------------->
+
+    <h1>GetAttribute and SetAttribute</h1>
     <h2>Example of GetAttribute</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
         
-        <img src="img/pic10.jpg" alt="pic10" title="GetAttribute">
+        <img src="img/pic11.jpg" alt="pic11" title="GetAttribute">
         <h2>Example of SetAttribute</h2>        <strong>Example:</strong> Below is an example.
 
-        <img src="img/pic11.jpg" alt="pic11" title="SetAttribute">
+        <img src="img/pic12.jpg" alt="pic12" title="SetAttribute">
     </pre>
-    <hr>
+    <br />
 
-    <h1 class="title-style">Change styles using JavaScript</h1>
+    <!----------------------- Change styles using JavaScript ----------------------------------->
+
+    <h1>Change styles using JavaScript</h1>
     <h2>Example of Change styles using JavaScript</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
 
-        <img src="img/pic12.jpg" alt="pic12" title="Change styles using JavaScript">
+        <img src="img/pic13.jpg" alt="pic13" title="Change styles using JavaScript">
     </pre>
-    
+
     <h2>Example of Change styles using JavaScript with For Loop</h2>
     <pre>
         <strong>Example:</strong> Below is an example.
 
-        <img src="img/pic13.jpg" alt="pic13" title="Change styles using JavaScript with For Loop">
+        <img src="img/pic14.jpg" alt="pic14" title="Change styles using JavaScript with For Loop">
     </pre>
-    
-    <h2>Hum is tarah b style add kar sakty hain jesy hum Css main likhty hain</h2>
+
+    <h2>
+      Hum is tarah b style add kar sakty hain jesy hum Css main likhty hain
+    </h2>
     <pre>
         <strong>Example:</strong> Below is an example.
 
-        <img src="img/pic14.jpg" alt="pic14" title="Change styles using JavaScript">
+        <img src="img/pic15.jpg" alt="pic15" title="Change styles using JavaScript">
     </pre>
-        
+    <br />
 
+    <!-------------- Adding and Removing Classes in JavaScript------------- ----------------->
 
+    <h1>Adding and Removing Classes in JavaScript</h1>
+    <h2>Examples of Add, Remove and Toggle Methods</h2>
+    <pre>
+        <strong>Example:</strong> Below is examples.
+    </pre>
+    <div class="three-to-one-head">
+      <h2 class="img-heading title-style">Add Method</h2>
+      <h2 class="img-heading title-style">Remove Method</h2>
+      <h2 class="img-heading title-style">Toggle Method</h2>
+    </div>
+    <br />
+    <div class="three-to-one">
+      <img
+        src="img/pic16.jpg"
+        alt="pic16"
+        class="width-size"
+        title="Adding Classes Method in JavaScript"
+      />
+      <img
+        src="img/pic17.jpg"
+        alt="pic17"
+        class="width-size"
+        title="Removing Classes Method in JavaScript"
+      />
+      <img
+        src="img/pic18.jpg"
+        alt="pic18"
+        class="width-size"
+        title="Toggle Method in JavaScript"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!-------------- Access Parent Sibling & Children Elements using JavaScript ----------------->
+
+    <h1>Access Parent Sibling & Children Elements using JavaScript</h1>
+    <h2>Examples of Access Parent Sibling & Children Elements</h2>
+    <pre>
+        <strong>Example:</strong> Below is examples.
+    </pre>
+    <div class="three-to-one-head">
+      <h2 class="img-heading title-style">Parent Element</h2>
+      <h2 class="img-heading title-style">Sibling Element</h2>
+      <h2 class="img-heading title-style">Children Element</h2>
+    </div>
+    <br />
+    <div class="three-to-one">
+      <img
+        src="img/pic19.JPG"
+        alt="pic19"
+        class="width-size"
+        title="Access Parent Element"
+      />
+      <img
+        src="img/pic20.JPG"
+        alt="pic20"
+        class="width-size"
+        title="Access Sibling Element"
+      />
+      <img
+        src="img/pic21.JPG"
+        alt="pic21"
+        class="width-size"
+        title="Access Children Element"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <h1>Difference Between Node and Element</h1>
+    <h2>Examples of Difference Between Node and Element</h2>
+    <pre>
+        <strong>Example:</strong> Below is examples.
+    </pre>
+    <div class="three-to-one-head two-to-one-head">
+      <h2 class="img-heading title-style">Child Nodes</h2>
+      <h2 class="img-heading title-style">Elements</h2>
+    </div>
+    <br />
+    <div class="three-to-one two-to-one">
+      <img
+        src="img/pic22.JPG"
+        alt="pic22"
+        class="width-size"
+        title="Child Nodes"
+      />
+      <img
+        src="img/pic23.JPG"
+        alt="pic23"
+        class="width-size"
+        title="Elements"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <h1>Difference between Append and AppendChild</h1>
+    <p>
+      <strong>Note!</strong> Har Element Node hota hai, lekin har Node Element
+      nai hota.
+    </p>
+    <h2>Example of Append and AppendChild</h2>
+    <pre>
+        <strong>Example:</strong> Below is examples.
+
+        <img src="img/pic24.jpg" alt="pic24">
+    </pre>
+    <h2>Difference between Append and AppendChild</h2>
+    <div class="three-to-one-head two-to-one-head">
+      <h2 class="img-heading title-style">Append</h2>
+      <h2 class="img-heading title-style">AppendChild</h2>
+    </div>
+    <br />
+    <div class="three-to-one two-to-one">
+      <img src="img/pic25.JPG" alt="pic25" class="width-size" title="Append" />
+      <img
+        src="img/pic26.JPG"
+        alt="pic26"
+        class="width-size"
+        title="AppendChild"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <h1>Create Element in JavaScript</h1>
+    <h2>Example of Create Element</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        <h2>Html Code:</h2>
+        <img src="img/pic27.jpg" alt="pic27">
+        <h2>Css Code:</h2>
+        <img src="img/pic28.jpg" alt="pic28">
+        <img src="img/pic29.jpg" alt="pic29">
+        <h2>JavaScript Code:</h2>
+        <img src="img/pic30.jpg" alt="pic30">
+        <h2>Short Way JavaScript Code:</h2>
+        <img src="img/pic31.JPG" alt="pic31">
+        <h2>Output Design:</h2>
+        <img src="img/pic32.JPG" alt="pic32">
+    </pre>
+    <br />
+
+    <h1>Remove element using JavaScript</h1>
+    <h2>Examples of Remove and RemoveChild Method</h2>
+    <pre>
+        <strong>Example:</strong> Below is examples.
+    </pre>
+    <div class="three-to-one-head two-to-one-head">
+      <h2 class="img-heading title-style">Remove() Method</h2>
+      <h2 class="img-heading title-style">RemoveChild() Method</h2>
+    </div>
+    <br />
+    <div class="three-to-one two-to-one">
+      <img
+        src="img/pic33.JPG"
+        alt="pic33"
+        class="width-size"
+        title="Remove() Method"
+      />
+      <img
+        src="img/pic34.JPG"
+        alt="pic34"
+        class="width-size"
+        title="RemoveChild() Method"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    
 
 
 
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

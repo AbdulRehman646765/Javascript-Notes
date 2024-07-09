@@ -73,7 +73,7 @@
 // console.log(img.setAttribute("class", "pic-style"));
 
 
-// Change styles using JavaScript.............................................................................
+// Change styles using JavaScript..........................................................................
 // const allParagraphs = document.querySelectorAll("p")
 // allParagraphs[0].style.color = "goldenrod"  
 // allParagraphs[1].style.color = "goldenrod"  
@@ -99,3 +99,88 @@
 //     padding-left: 10px;
 //     border-left: 5px solid white; `
 // }
+
+
+// Adding and Removing Classes in JavaScript................................................................
+// Add Class Method ...................................................
+// const addMethod = document.querySelectorAll("h2")[1].classList.add("title-style")
+
+// Remove Class Method .................................................
+// const removeMethod = document.querySelectorAll("h2")[1].classList.remove("title-style")
+
+// Toggle Class Method .................................................
+// const toggleMethod = document.querySelectorAll("h2")[1].classList.toggle("title-style")
+
+// const h2 = [document.querySelector(".dom-tree")]
+// for (const addMethod of h2) {
+//     addMethod.classList.toggle("title-style")
+//     console.log(h2);
+// }
+
+
+// Access Parent Sibling & Children Elements using JavaScript..............................................
+// // Parent Element................................................
+// const test = document.querySelector(".three-to-one")
+// console.log(test.parentElement);
+
+// // Children Element...............................................
+// const test = document.querySelector(".three-to-one")
+// console.log(test.children);
+
+// // Sibling Element................................................
+// const test = document.querySelector("[alt='pic20']")
+// console.log(test.previousElementSibling);
+// console.log(test.nextElementSibling);
+
+
+// // Remove element using JavaScript.........................................................................
+// // Remove() vs RemoveChild()............................................
+
+// // Remove().............................................................
+// // const container = document.querySelector(".container")
+
+// const deleteH1 = document.getElementById("h1")
+// deleteH1.remove()   
+
+// const deletePara = document.getElementById("p")
+// deletePara.remove()   
+
+// const deleteLink = document.getElementById("a")
+// deleteLink.remove()
+
+// // RemoveChild().........................................................
+// const deleteMyLink = document.querySelector("#a")
+// deleteMyLink.parentElement.removeChild(deleteMyLink)
+
+// deleteH1.parentElement.removeChild(deleteH1)
+
+
+
+
+
+
+
+// *****************************************************************************************************
+// Headings Style.................................................
+    const h1 = document.querySelectorAll("h1");
+    // console.log(h1);
+    h1[1].setAttribute("class", "title-style")
+    h1[2].setAttribute("class", "title-style")
+    h1[3].setAttribute("class", "title-style")
+    h1[4].setAttribute("class", "title-style") 
+    h1[5].setAttribute("class", "title-style")
+    h1[6].setAttribute("class", "title-style")
+    h1[7].setAttribute("class", "title-style")
+    h1[8].setAttribute("class", "title-style") 
+    h1[9].setAttribute("class", "title-style")
+    h1[10].setAttribute("class", "title-style")
+    h1[11].setAttribute("class", "title-style")
+    h1[12].setAttribute("class", "title-style") 
+    h1[13].setAttribute("class", "title-style") 
+    h1[14].setAttribute("class", "title-style") 
+    h1[15].setAttribute("class", "title-style") 
+    h1[16].setAttribute("class", "title-style") 
+    h1[17].setAttribute("class", "title-style") 
+    h1[18].setAttribute("class", "title-style") 
+    h1[19].setAttribute("class", "title-style") 
+     

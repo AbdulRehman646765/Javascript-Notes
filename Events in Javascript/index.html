@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="main-title">Events in JavaScript</h1>
+    <br />
+
+    <h1>Events in JavaScript</h1>
+    <h2>Add Event this way</h2>
+    <h2>Example of Event</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        function myFuc(){
+            console.log("Clicked on Main Title");
+        }
+        const mainTitle = document.querySelector(".main-title")
+        <b><mark>mainTitle.onclick = myFuc</mark></b>
+
+    <strong>Output:</strong>
+
+        <b>"Clicked on Main Title"</b>
+    </pre>
+    <br />
+
+    <h1>addEventListener as a Named Function</h1>
+    <h2>Example of addEventListener as a Named Function</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        function <b><mark>sayHi()</mark></b>{
+            console.log("Clicked on Heading Number Two");
+        }
+        const h2 = document.querySelector("h2")
+        <b><mark>h2.addEventListener('click', sayHi)</mark></b>
+        
+    <strong>Output:</strong>
+
+    <b>"Clicked on Heading Number Two"</b>
+    </pre>
+    <br />
+
+    <h1>addEventListener as a Anonymous Function</h1>
+    <h2>Example of addEventListener as a Anonymous Function</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        const card = document.querySelector(".card")
+        <b><mark>card.addEventListener("click", function()</mark></b>{
+            console.log("Clicked on this Card Number");
+        })
+        
+    <strong>Output:</strong>
+
+    <b>"Clicked on this Card Number"</b>
+    </pre>
+    <br />
+
+    <h1>addEventListener as a Arrow Function</h1>
+    <h2>Example of addEventListener as a Arrow Function</h2>
+    <pre>
+        <strong>Example:</strong> Below is an example.
+
+        const card2 = document.querySelector(".card")
+        <b><mark>card2.addEventListener("click", () => </mark></b>{
+            console.log("Clicked on this Card Number");
+        })
+        
+    <strong>Output:</strong>
+
+    <b>"Clicked on this Card Number"</b>
+    </pre>
+    <br />
+
+    <div class="head-container">
+      <h1>addEventListener Add New Card</h1>
+      <button class="add-card-btn">
+        <a href="Add card.html" target="_blank">Code</a>
+      </button>
+      <h2>Example of addEventListener when Click Button add the New Card</h2>
+      <pre>
+        <strong>Example:</strong> Below is an example.
+      </pre>
+
+      <div class="container">
+        <div class="card add-card">+</div>
+      </div>
+      <div class="container-2">
+        <h2 class="reached-head"></h2>
+      </div>
+    </div>
+    <br />
+
+    <!---------------------------- Form Event and Event Object in JavaScript --------------------------->
+
+    <h1>Form Event and Event Object in JavaScript</h1>
+
+    <!-------------------------- Input Event ------------------------------------------->
+    <h2>Input Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+    <fieldset id="input-event">
+      <legend>Input Event</legend>
+      <br />
+      <form action="">
+        <label for="input-username">Username :</label> <br />
+        <br />
+        <input type="text" id="input-username" name="username" /> <br />
+        <br />
+        <br />
+        <label for="input-user-email">Email :</label> <br />
+        <br />
+        <input type="email" id="input-user-email" name="email" /> <br />
+        <br />
+        <br />
+        <label for="input-password">Password :</label> <br />
+        <br />
+        <input type="password" id="input-password" name="password" /> <br />
+        <br />
+        <br />
+        <button class="form-btn">Submit</button> <br />
+      </form>
+      <h2 class="input-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Change Event ------------------------------------------->
+    <h2>Change Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+    <fieldset>
+      <legend>Change Event</legend>
+      <br />
+      <form action="">
+        <label for="change-username">Username :</label> <br />
+        <br />
+        <input type="text" id="change-username" name="username" /> <br />
+        <br />
+        <br />
+        <label for="change-user-email">Email :</label> <br />
+        <br />
+        <input type="email" id="change-user-email" name="email" /> <br />
+        <br />
+        <br />
+        <button class="form-btn">Submit</button> <br />
+      </form>
+      <h2 class="change-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Focus Event ------------------------------------------->
+    <h2>Focus Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+    <fieldset>
+      <legend>Focus Event</legend>
+      <br />
+      <form action="">
+        <label for="focus-username">Username :</label> <br />
+        <br />
+        <input type="text" id="focus-username" name="username" /> <br />
+        <br />
+        <br />
+        <label for="focus-user-email">Email :</label> <br />
+        <br />
+        <input type="email" id="focus-user-email" name="email" /> <br />
+        <br />
+        <br />
+        <button class="form-btn">Submit</button> <br />
+      </form>
+      <h2 class="focus-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Blur Event ------------------------------------------->
+    <h2>Blur Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+    <fieldset>
+      <legend>Blur Event</legend>
+      <br />
+      <form action="">
+        <label for="blur-username">Username :</label> <br />
+        <br />
+        <input type="text" id="blur-username" name="username" /> <br />
+        <br />
+        <br />
+        <label for="blur-user-email">Email :</label> <br />
+        <br />
+        <input type="email" id="blur-user-email" name="email" /> <br />
+        <br />
+        <br />
+        <button class="form-btn">Submit</button> <br />
+      </form>
+      <h2 class="blur-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Submit Event ------------------------------------------->
+    <h2>Submit Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+    <fieldset class="submit-fieldset">
+      <legend>Submit Event</legend>
+      <br />
+      <form action="" class="submit-form">
+        <label for="submit-username">Username :</label> <br />
+        <br />
+        <input type="text" id="submit-username" name="username" /> <br />
+        <br />
+        <br />
+        <label for="submit-user-email">Email :</label> <br />
+        <br />
+        <input type="email" id="submit-user-email" name="email" /> <br />
+        <br />
+        <br />
+        <button class="form-btn">Submit</button> <br />
+      </form>
+      <h2 class="submit-value"></h2>
+    </fieldset>
+    <br />
+    <br />
+
+    <!------------------------------ Keyboard events in JavaScript ------------------------------------>
+
+    <div class="keyboard-e-container-1">
+      <h1>Keyboard Events in JavaScript</h1>
+      <h2>Keypress Event</h2>
+      <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre
+      >
+      <div class="imagine-win-box-1" tabindex="0">
+        <h2>Imagine Window Box</h2>
+      </div>
+      <h2 class="key-h2">
+        The Key Code will appear here, When click the Imagine Window Box:
+      </h2>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!-------------------------- Keyup Event ------------------------------------------->
+    <h2>Keyup Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <div class="keyboard-e-container-2">
+      <div class="imagine-win-box-2" tabindex="0">
+        <h2>Imagine Window Box</h2>
+      </div>
+      <h2 class="key-up-h2">
+        The Key Code will appear here, When click the Imagine Window Box:
+      </h2>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!------------------------------ Mouse events in JavaScript ------------------------------------>
+
+    <h1>Mouse Events in JavaScript</h1>
+
+    <!-------------------------- Mouse Click Event ------------------------------------------->
+    <h2>Mouse Click Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Click Event</legend>
+      <br />
+      <label for="mc-username">Username :</label> <br />
+      <br />
+      <input type="text" id="mc-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-click-btn">Submit</button> <br />
+      <h2 class="mouse-click-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Double Click Event ------------------------------------------->
+    <h2>Mouse Double Click Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Double Click Event</legend>
+      <br />
+      <label for="mdc-username">Username :</label> <br />
+      <br />
+      <input type="text" id="mdc-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-dblclick-btn">Submit</button> <br />
+      <h2 class="mouse-dblclick-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Up Event ------------------------------------------->
+    <h2>Mouse Up Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Up Event</legend>
+      <br />
+      <label for="mu-username">Username :</label> <br />
+      <br />
+      <input type="text" id="mu-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-up-btn">Submit</button> <br />
+      <h2 class="mouse-up-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Down Event ------------------------------------------->
+    <h2>Mouse Down Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Down Event</legend>
+      <br />
+      <label for="md-username">Username :</label> <br />
+      <br />
+      <input type="text" id="md-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-down-btn">Submit</button> <br />
+      <h2 class="mouse-down-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Enter Event ------------------------------------------->
+    <h2>Mouse Enter Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Enter Event</legend>
+      <br />
+      <label for="me-username">Username :</label> <br />
+      <br />
+      <input type="text" id="me-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-enter-btn">Submit</button> <br />
+      <h2 class="mouse-enter-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Leave Event ------------------------------------------->
+    <h2>Mouse Leave Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Leave Event</legend>
+      <br />
+      <label for="ml-username">Username :</label> <br />
+      <br />
+      <input type="text" id="ml-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-leave-btn">Submit</button> <br />
+      <h2 class="mouse-leave-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Move Event ------------------------------------------->
+    <h2>Mouse Move Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Move Event</legend>
+      <br />
+      <label for="mm-username">Username :</label> <br />
+      <br />
+      <input type="text" id="mm-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-move-btn">Submit</button> <br />
+      <h2 class="mouse-move-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Over Event ------------------------------------------->
+    <h2>Mouse Over Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Over Event</legend>
+      <br />
+      <label for="mo-username">Username :</label> <br />
+      <br />
+      <input type="text" id="mo-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-over-btn"><span>Submit</span></button>
+      <br />
+      <h2 class="mouse-over-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Mouse Wheel Event ------------------------------------------->
+    <h2>Mouse Wheel Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Mouse Wheel Event</legend>
+      <br />
+      <label for="mw-username">Username :</label> <br />
+      <br />
+      <input type="text" id="mw-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn mouse-wheel-btn"><span>Submit</span></button>
+      <br />
+      <h2 class="mouse-wheel-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Drag Event ------------------------------------------->
+    <h2>Drag Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Drag Event</legend>
+      <br />
+      <label for="d-username">Username :</label> <br />
+      <br />
+      <input type="text" id="d-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn drag-btn" draggable="true">Submit</button> <br />
+      <h2 class="drag-value"></h2>
+    </fieldset>
+    <br />
+
+    <!-------------------------- Pointer Move Event ------------------------------------------->
+    <h2>Pointer Move Event</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Pointer Move Event</legend>
+      <br />
+      <label for="pm-username">Username :</label> <br />
+      <br />
+      <input type="text" id="pm-username" name="username" /> <br />
+      <br />
+      <br />
+      <button class="form-btn pointer-move-btn">Submit</button> <br />
+      <h2 class="pointer-move-value"></h2>
+    </fieldset>
+    <br />
+    <br />
+    <br />
+
+    <!-------------------- Event Bubbling and Event Capturing in JavaScript ---------------------------->
+    <h1>Event Bubbling and Event Capturing in JavaScript</h1>
+    <h2>Examples of Event Bubbling and Event Capturing</h2>
+    <pre>
+      <strong>Example:</strong> Below is Examples.
+    </pre>
+
+    <div class="heading-container">
+      <h2 class="title-style">Event Bubbling</h2>
+      <h2 class="title-style">Event Capturing</h2>
+    </div>
+
+    <pre>  
+      <div class="container">
+        <!-- Event Bubbling Box -->
+        <div class="golden">
+          <div class="gray">
+            <div class="white"></div>
+        </div>
+       </div>
+       
+       <!-- Event Capturing Box -->
+        <div class="golden golden-capture">
+          <div class="gray gray-capture">
+            <div class="white white-capture"></div>
+        </div>
+       </div>
+      </div>
+    </pre>
+
+    <!-------------------------------- The event should only run once --------------------------------->
+    <h2>The event should only run once</h2>
+    <pre>
+      <strong>Example:</strong> Below is an example.
+    </pre>
+
+    <fieldset class="mouse-fieldset">
+      <legend>Event Should Only Run Once</legend>
+      <br />
+      <label for="onetime-username">Username :</label> <br />
+      <br />
+      <input type="text" id="onetime-username"/> <br />
+      <br />
+      <br />
+      <button class="form-btn onetime-btn">Submit</button> <br />
+      <h2 class="onetime-value"></h2>
+    </fieldset>
+    <br />
+    <br />
+    <br />
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
